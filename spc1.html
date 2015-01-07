@@ -1,0 +1,79 @@
+
+<html>
+ 
+<head>
+
+<title>Weather Briefer</title>
+<link rel="shortcut icon" href="/jefferson.ico" />
+<link rel="icon" href="/jefferson.ico" />
+ 
+ <style>
+ #leftcolumn {
+width: 180px;
+float left;
+margin-right:4px;
+margin-left: 10px;
+
+ }
+ 
+ #container {
+width: 825px;
+height: 625px;
+position:fixed;
+top:0px;
+left:180px;
+
+ 
+ }
+ </style>
+ 
+<script type="text/javascript">
+function jsFilter(strInc)
+{
+document.getElementByID("display").src =  ';
+}
+</script>
+ 
+</head>
+ 
+ 
+
+ <body style="background-image:url('Background.png');background-repeat:no-repeat;background-position:right top;background-color:#000066;color:#FFFFFF">
+
+
+<div id="leftcolumn">
+<h2 class="left"> </h2>
+
+
+
+
+</br>
+</br>
+<button type='button' onClick="document.getElementById('display').src='http://climate.cod.edu/flanis/analysis/upper/index.php?type=US-300jet-0' ">300MB</button>
+
+
+</br>
+<button type='button' onClick="document.getElementById('display').src='http://climate.cod.edu/flanis/analysis/upper/index.php?type=US-vort-0' ">500MB</button>
+
+</br>
+<button type='button' onClick="document.getElementById('display').src='http://climate.cod.edu/flanis/analysis/upper/index.php?type=US-700rh-0' ">700MB</button>
+
+</br>
+<button type='button' onClick="document.getElementById('display').src='http://climate.cod.edu/flanis/analysis/upper/index.php?type=US-850dew-0' ">850MB</button>
+
+</br>
+<button type='button' onClick="document.getElementById('display').src='http://climate.cod.edu/flanis/analysis/upper/index.php?type=US-thick-0' ">THICKNESS</button>
+
+</br>
+<button type='button' onClick="document.getElementById('display').src='http://www.wpc.ncep.noaa.gov/sfc/satsfcnps.gif' ">SFC</button>
+
+
+<div id="container">
+
+
+<iframe id="display" width="100%" height="100%" frameborder="0" marginwidth="0" marginheight="0" src="http://www.wpc.ncep.noaa.gov/sfc/satsfcnps.gif"></iframe>
+</div>
+ 
+</body>
+ 
+</html>
