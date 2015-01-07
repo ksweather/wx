@@ -1,0 +1,397 @@
+
+ 
+<style> 
+	HTML{overflow:hidden;}
+	BODY {
+		font-family : Verdana, Helvetica, Arial, sans-serif;
+		margin-bottom : 0px;
+		margin-left : 0px;
+		margin-right : 0px;
+		margin-top : 20px;
+		background-color:#000000;
+		overflow:hidden;	
+	}
+	TITLE {
+	background-color:#FFFFFF;
+	}
+FONT {font-size: 12px;color:#FFFFFF;}
+input.calc { height:15px; font-size:10px;padding:1px;border:1px solid black;}
+</style>
+<style type="text/css"> 
+<!--
+.blue1 {color: #3300FF}
+.main {background-color:#336699; font-family : Arial, Helvetica, sans-serif; font-size : 12px; font-weight:bold; color:#FFFFFF; width: 104px; height: 25px;}
+.button10calc {background-color : white; font-family : Arial, Helvetica, sans-serif; color:#000000; font-size : 10px; font-weight:bold; width : 51px; height:18px; padding:0px; border:1px solid black;}
+-->
+</style>
+<style> 
+div{position:relative; z-index:3; width:auto; height:auto;  left: -2px; overflow: auto; visibility: visible;}
+iframe{width:100%; height:100%;  top:100px border:0px;left:-2px;}
+.boldwhite {
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size:16px;
+}
+</style>
+ 
+	
+		
+								
+		
+ 
+	
+ 
+ 
+<html>
+<head>
+
+<title>Weather Briefer</title>
+<link rel="shortcut icon" href="/jefferson.ico" />
+<link rel="icon" href="/jefferson.ico" />
+
+ 
+<script LANGUAGE="JavaScript1.2" type="text/javascript"> 
+            var currentDiv = "TAB1";
+			var currentbtn = "TBTN1";
+            
+            function ChangeLayer(divName,btnName)
+            {
+                if(currentDiv != null)
+                {
+                    document.getElementById(currentDiv).style.display = "none";
+					document.getElementById(currentbtn).style.backgroundColor = "#336699";
+                }
+                currentDiv = divName;
+				currentbtn = btnName;
+                document.getElementById(currentDiv).style.display = "block";
+				document.getElementById(currentbtn).style.backgroundColor = "blue";
+            }
+
+
+</script>
+
+
+</head>
+
+
+
+
+ 
+</head>
+<body>
+
+
+<div style=" position:absolute; z-index:-1; top:0px; left:-2px; width:auto; height:12px;">
+<iframe src="CLOCK.html" style="width:100%; height:0px;" scrolling="no" frameborder="0" ></iframe>
+</div>
+<div style=" position:absolute; z-index:1; top:20px; left:-2px; width:auto; height:auto; border-color:#330066; border-width:2px;">
+ 
+<table CELLSPACING="0" border="0" cellpadding="1" valign="bottom" align="left" width="98%">
+<tr>
+
+
+<td colspan="20" align="center"><span class="boldwhite">Weather Briefer</span></td>
+
+
+</tr>
+<!--- start tab row 1 --->
+<tr>
+	<form class="style1">
+	<td colspan="2" align="left" valign="top">
+	<input id="TBTN1" type="button" class="main" style="background-color:#0000FF;"  onClick="javascript:ChangeLayer('TAB1','TBTN1')" value="SPC">
+	</td>
+	</form>
+	
+ 
+	<form class="style1">
+	<td colspan="2" align="left" valign="top">
+	<input id="TBTN2" type="button" class="main" onClick="javascript:ChangeLayer('TAB2','TBTN2')" value="MD">
+	</td>
+	</form>
+	
+	<form class="style1">
+	<td colspan="2" align="left" valign="top">
+	<input id="TBTN3" type="button" class="main" onClick="javascript:ChangeLayer('TAB3','TBTN3')" value="WW">
+	</td>
+	</form>
+	
+	<form class="style1">
+	<td colspan="2" align="left" valign="top">
+	<input id="TBTN4" type="button" class="main" onClick="javascript:ChangeLayer('TAB4','TBTN4')" value="QPF">
+	</td>
+	</form>
+	
+	<form class="style1">
+	<td colspan="2" align="left" valign="top">
+	<input id="TBTN5" type="button" class="main" onClick="javascript:ChangeLayer('TAB5','TBTN5')" value="FIREWX">
+	</td>
+	</form>
+	
+	<form class="style1">
+	<td colspan="2" align="left" valign="top">
+	<input id="TBTN6" type="button" class="main" onClick="javascript:ChangeLayer('TAB6','TBTN6')" value="CHARTS">
+	</td>
+	</form>
+	
+	<form class="style1">
+	<td colspan="2" align="left" valign="top">
+	<input id="TBTN7" type="button" class="main" onClick="javascript:ChangeLayer('TAB7','TBTN7')" value="CCFP">
+	</td>
+	</form>
+	
+	<form class="style1">
+	<td colspan="2" align="left" valign="top">
+	<input id="TBTN8" type="button" class="main" onClick="javascript:ChangeLayer('TAB8','TBTN8')" value="RADAR">
+	</td>
+	</form>
+	
+	<form class="style1">
+	<td colspan="2" align="left" valign="top">
+	<input id="TBTN9" type="button" class="main" onClick="javascript:ChangeLayer('TAB9','TBTN9')" value="LGT">
+	</td>
+	</form>
+	
+	<form class="style1">
+	<td colspan="2" align="left" valign="top">
+	<input id="TBTN10" type="button" class="main" onClick="javascript:ChangeLayer('TAB10','TBTN10')" value="SAT">
+	</td>
+	</form>
+	
+	<form class="style1">
+	<td colspan="2" align="left" valign="top">
+	<input id="TBTN11" type="button" class="main" onClick="javascript:ChangeLayer('TAB11','TBTN11')" value="TERMINAL WX">
+	</td>
+	</form>
+ 
+	<form class="style1">
+	<td colspan="2" align="left" valign="top">
+	<input id="TBTN12" type="button"class="main" onClick="javascript:ChangeLayer('TAB12','TBTN12')" value="MAPPER">
+	</td>
+	</form>
+
+
+</tr>
+ 
+</table>
+</div>
+ 
+<!---<div style="background-color:#003366; height:30px; top:70px; z-index:2; border-color:#330066; border-width:2px;"--->
+<div style=" position:absolute; z-index:2; top:70px; left:-2px; width:auto; height:auto; border-color:#330066; border-width:2px;">
+<table CELLSPACING="0" border="0" cellpadding="1" valign="bottom" align="left" width="100%">
+<!--- start tab row 2 --->
+<tr>
+ 
+	<form class="style1">
+	<td colspan="2" align="left" valign="top">
+	<input id="TBTN13" type="button" class="main" onClick="javascript:ChangeLayer('TAB13','TBTN13')" value="AIRMET">
+	</td>
+	</form>
+	
+	<form class="style1">
+	<td colspan="2" align="left" valign="top">
+	<input id="TBTN14" type="button" class="main" onClick="javascript:ChangeLayer('TAB14','TBTN14')" value="FLWIND">
+	</td>
+	</form>
+	
+	<form class="style1">
+	<td colspan="2" align="left" valign="top">
+	<input id="TBTN15" type="button" class="main" onClick="javascript:ChangeLayer('TAB15','TBTN15')" value="SKYVECTOR">
+	</td>
+	</form>
+ 	
+	<form class="style1">
+	<td colspan="2" align="left" valign="top">
+	<input id="TBTN16" type="button" class="main" onClick="javascript:ChangeLayer('TAB16','TBTN16')" value="PIREP">
+	</td>
+	</form>
+ 	
+	<form class="style1">
+	<td colspan="2" align="left" valign="top">
+	<input id="TBTN17" type="button" class="main" onClick="javascript:ChangeLayer('TAB17','TBTN17')" value="HAZARDS">
+	</td>
+	</form>
+	
+	<form class="style1">
+	<td colspan="2" align="left" valign="top">
+	<input id="TBTN18" type="button" class="main" onClick="javascript:ChangeLayer('TAB18','TBTN18')" value="MESOANALYSIS">
+	</td>
+	</form>
+
+	<form class="style1">
+	<td colspan="2" align="left" valign="top">
+	<input id="TBTN19" type="button" class="main" onClick="javascript:ChangeLayer('TAB19','TBTN19')" value="MODELS">
+	</td>
+	</form>
+	
+	
+	<form class="style1">
+	<td colspan="2" align="left" valign="top">
+	<input id="TBTN20" type="button" class="main" onClick="javascript:ChangeLayer('TAB20','TBTN20')" value="SREF">
+	</td>
+	</form>
+	
+	
+	
+	<form class="style1">
+	<td colspan="2" align="left" valign="top">
+	<input id="TBTN21" type="button" class="main" onClick="javascript:ChangeLayer('TAB21','TBTN21')" value="RAWS/TRAFF">
+	</td>
+	</form>
+	
+	
+<form class="style1">
+	<td colspan="2" align="left" valign="top">
+	<input id="TBTN22" type="button" class="main" onClick="javascript:ChangeLayer('TAB22','TBTN22')" value="TOOLS">
+	</td>
+	</form>
+	
+<form class="style1">
+	<td colspan="2" align="left" valign="top">
+	<input id="TBTN23" type="button" class="main" onClick="javascript:ChangeLayer('TAB23','TBTN23')" value="AIRPORT DATA">
+	</td>
+	</form>
+<form class="style1">
+	<td colspan="2" align="left" valign="top">
+	<input id="TBTN24" type="button" class="main" onClick="javascript:ChangeLayer('TAB24','TBTN24')" value="HOURLY">
+	</td>
+	</form>
+</tr>
+ 
+</table>
+</div>
+ 
+</table>
+</div>
+<!---- START TAB WINDOWS --->
+<div style="top: 83px;">
+<div id="TAB1" style="display:none;">
+	<iframe name="TAB1" src="spc1.html"  scrolling="yes">
+	</iframe>
+</div>
+ 
+
+
+ 
+<div id="TAB2" style="display:none;">
+	<iframe name="TAB2" src="md.html" scrolling="yes">
+	</iframe>
+</div>
+ 
+<div id="TAB3" style="display:none;">
+	<iframe name="TAB3" src="ww.html" scrolling="yes">
+	</iframe>
+</div>
+ 
+<div id="TAB4"  style="display:none;">
+	<iframe name="TAB4" src="qpf.html" scrolling="yes">
+	</iframe>
+</div>
+ 
+<div id="TAB5" style="display:none;">
+	<iframe name="TAB5" src="firewx.html" scrolling="no">
+	</iframe>
+</div>
+ 
+<div id="TAB6" style="display:none;">
+	<iframe name="TAB6" src="500mb.html" scrolling="no">
+	</iframe>
+</div>
+ 
+<div id="TAB7" style="display:none;">
+	<iframe name="TAB7" src="ccfp.html" scrolling="no">
+	</iframe>
+</div>
+ 
+<div id="TAB8" style="display:none;">
+	<iframe name="TAB8" src="radar.html" scrolling="no" >
+	</iframe>
+</div>
+ 
+<div id="TAB9" style="display:none;">
+	<iframe name="TAB9" src="ltg.html" scrolling="yes">
+	</iframe>
+</div>
+ 
+<div id="TAB10" style="display:none;">
+	<iframe name="TAB10" src="sat.html" scrolling="no">
+	</iframe>
+</div>
+ 
+<div id="TAB11" style="display:none;">
+	<iframe name="TAB11" src="terminal.html" scrolling="no">
+	</iframe>
+</div>
+ 
+<div id="TAB12" style="display:none;">
+	<iframe name="TAB12" src="mapper.html" scrolling="no">
+	</iframe>
+</div>
+ 
+<div id="TAB13" style="display:none;">
+	<iframe name="TAB13" src="airmet.html" scrolling="no">
+	</iframe>
+</div>
+ 
+<div id="TAB14" style="display:none;">
+	<iframe name="TAB14" src="FLwind.html" scrolling="no">
+	</iframe>
+</div>
+ 
+<div id="TAB15" style="display:none;">
+	<iframe name="TAB15" src="skyvector.html" scrolling="no">
+	</iframe>
+</div>
+ 
+<div id="TAB16" style="display:none;">
+	<iframe name="TAB16" src="pirep.html" scrolling="no">
+	</iframe>
+</div>
+ 
+<div id="TAB17" style="display:none;">
+	<iframe name="TAB17" src="hazards.html" scrolling="no">
+	</iframe>
+</div>
+ 
+<div id="TAB18" style="display:none;">
+	<iframe name="TAB18" src="meso.html" scrolling="no">
+	</iframe>
+</div>
+ 
+<div id="TAB19" style="display:none;">
+	<iframe name="TAB19" src="sfcmodel.html" scrolling="no" >
+	</iframe>
+</div>
+ 
+<div id="TAB20" style="display:none;">
+	<iframe name="TAB20" src="sref.html" scrolling="no" >
+	</iframe>
+</div>
+ 
+ 
+
+
+<div id="TAB21" style="display:none;">
+	<iframe name="TAB21" src="raws.html" scrolling="no" >
+	</iframe>
+</div>
+ 
+<div id="TAB22" style="display:none;">
+	<iframe name="TAB22" src="tools.html" scrolling="no">
+	</iframe>
+</div>
+ 
+<div id="TAB23" style="display:none;">
+	<iframe name="TAB23" src="airport.html" scrolling="no">
+	</iframe>
+</div>
+ 
+ 
+<div id="TAB24" style="display:none;">
+	<iframe name="TAB24" src="hourly.html" scrolling="no">
+	</iframe>
+</div>
+</div>	
+
+<!---- END TAB WINDOWS --->
+</body>
+</html>
