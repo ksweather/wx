@@ -1,0 +1,97 @@
+
+<html>
+ 
+<head>
+
+<title>Weather Briefer</title>
+<link rel="shortcut icon" href="/jefferson.ico" />
+<link rel="icon" href="/jefferson.ico" />
+ 
+ <style>
+ #leftcolumn {
+width: 180px;
+float left;
+margin-right:4px;
+margin-left: 10px;
+
+ }
+ 
+ #container {
+width: 1300px;
+position:fixed;
+top:0px;
+left:180px;
+
+ 
+ }
+ </style>
+ 
+<script type="text/javascript">
+function jsFilter(strInc)
+{
+document.getElementByID("display").src =  ';
+}
+</script>
+ 
+</head>
+ 
+ 
+
+ <body style="background-image:url('Background.png');background-repeat:no-repeat;background-position:right top;background-color:#000066;color:#FFFFFF">
+
+
+<div id="leftcolumn">
+<h2 class="left"> </h2>
+
+
+
+METEOGRAMS
+</br>
+</br>
+<button type='button' onClick="document.getElementById('display').src='http://charlie.wxcaster.com/cgi-bin/NAMCrosssectionsWxCaster.cgi?model=NAM&raster=2&vector=0&clouds=0&STATIONID=KBNY' ">NAM KBNY</button>
+
+</br>
+<button type='button' onClick="document.getElementById('display').src='http://charlie.wxcaster.com/cgi-bin/GFSCrosssectionsWxCaster.cgi?model=GFS&raster=2&vector=0&clouds=0&STATIONID=KBNY' ">GFS KBNY</button>
+
+</br>
+<button type='button' onClick="document.getElementById('display').src='http://charlie.wxcaster.com/cgi-bin/NAMCrosssectionsWxCaster.cgi?model=NAM&raster=2&vector=0&clouds=0&STATIONID=KRDD' ">NAM KRDD</button>
+</br>
+<button type='button' onClick="document.getElementById('display').src='http://charlie.wxcaster.com/cgi-bin/GFSCrosssectionsWxCaster.cgi?model=GFS&raster=2&vector=0&clouds=0&STATIONID=KRDD' ">GFS KRDD</button>
+</br>
+<button type='button' onClick="document.getElementById('display').src='http://charlie.wxcaster.com/cgi-bin/NAMCrosssectionsWxCaster.cgi?model=NAM&raster=2&vector=0&clouds=0&STATIONID=KVCB' ">NAM KVCB</button>
+</br>
+<button type='button' onClick="document.getElementById('display').src='http://charlie.wxcaster.com/cgi-bin/GFSCrosssectionsWxCaster.cgi?model=GFS&raster=2&vector=0&clouds=0&STATIONID=KVCB' ">GFS KVCB</button>
+</br>
+</br>
+SKEWT'S
+</br>
+</br>
+<button type='button' onClick="document.getElementById('display').src='http://beta.wxcaster.com/cgi-bin/parse_skewt_trace_loop2.cgi?model=NAM&STATIONID=KBNY' ">NAM KBNY</button>
+</br>
+<button type='button' onClick="document.getElementById('display').src='http://beta.wxcaster.com/cgi-bin/parse_skewt_trace_loop2.cgi?model=GFS&STATIONID=KBNY' ">GFS KBNY</button>
+</br>
+<button type='button' onClick="document.getElementById('display').src='http://beta.wxcaster.com/cgi-bin/parse_skewt_trace_loop2.cgi?model=NAM&STATIONID=KRDD' ">NAM KRDD</button>
+</br>
+<button type='button' onClick="document.getElementById('display').src='http://beta.wxcaster.com/cgi-bin/parse_skewt_trace_loop2.cgi?model=GFS&STATIONID=KRDD' ">GFS KRDD</button>
+</br>
+<button type='button' onClick="document.getElementById('display').src='http://beta.wxcaster.com/cgi-bin/parse_skewt_trace_loop2.cgi?model=NAM&STATIONID=KVCB' ">NAM KVCB</button>
+</br>
+<button type='button' onClick="document.getElementById('display').src='http://beta.wxcaster.com/cgi-bin/parse_skewt_trace_loop2.cgi?model=GFS&STATIONID=KVCB' ">GFS KVCB</button>
+</br>
+</div>
+<br />
+
+
+<br />
+
+
+
+<div id="container">
+
+
+<iframe id="display" width="100%" height="100%" frameborder="0" marginwidth="0" marginheight="0" src="http://charlie.wxcaster.com/cgi-bin/NAMCrosssectionsWxCaster.cgi?model=NAM&raster=2&vector=0&clouds=0&STATIONID=KBNY"></iframe>
+</div>
+ 
+</body>
+ 
+</html>

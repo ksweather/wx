@@ -1,0 +1,30 @@
+
+<html>
+ 
+<head>
+
+<title>Weather Briefer</title>
+<link rel="shortcut icon" href="/jefferson.ico" />
+<link rel="icon" href="/jefferson.ico" />
+ 
+<script type="text/javascript">
+function jsFilter(strInc)
+{
+document.getElementByID("display").src = http://www.wrh.noaa.gov/forecast/wxtables/index.php?lat=41.01085&lon=-121.42975&table=pfm&duration=7&interval=6 ';
+}
+</script>
+ 
+</head>
+ 
+<body style="background-image:url('Background.png');background-repeat:no-repeat;background-position:right top;background-color:#000066;color:#FFFFFF">
+
+
+
+<br />
+<iframe id="display" width="100%" height="100%" frameborder="0" marginwidth="0" marginheight="0" src="http://www.wrh.noaa.gov/forecast/wxtables/index.php?lat=41.01085&lon=-121.42975&table=pfm&duration=7&interval=6"></iframe>
+
+
+ 
+</body>
+ 
+</html>

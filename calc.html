@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Crosswind Calculator</title>
+  
+  <script type='text/javascript' src='http://code.jquery.com/jquery-1.7.1.js'></script>
+  
+  <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+  
+  
+  <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+  
+  <style type='text/css'>
+    * {float: center; clear: center; margin: 10px 0;}
+
+#container {clear:both; margin: 10px 0;}
+div {
+	margin:0px auto;
+	width:400px;
+	
+}
+body{
+	background-image:url('background.jpg');
+        background-repeat:no-repeat;
+	background-position:center top;
+	background-color:#000000;
+  </style>
+  
+
+
+<script type='text/javascript'>//<![CDATA[ 
+$(window).load(function(){
+$('button').click(function(){ // run anytime the value changes
+
+var firstValue = parseFloat($('#id_speed').val()); // get value of field
+var secondValue = parseFloat($('#id_direction').val()); // convert it to a float
+var thirdValue = parseFloat($('#id_runway').val());
+
+$('#added').html(Math.round(Math.abs(Math.sin((Math.PI *(secondValue/180)) - Math.PI *(thirdValue/180))*  firstValue  ))+" KTS"); // add them and output it
+});
+
+
+});//]]>  
+
+</script>
+</HEAD>
+
+<BODY>
+<div>
+<label for="direction">direction</label></br>
+<input type="text" id="id_direction"/></br>
+
+<label for="speed">speed</label></br>
+<input type="text" id="id_speed"/></br>
+
+<label for="runway">Runway Direction</label></br>
+<input type="text" id="id_runway"/></br>
+
+<button> Calculate</button></br>
+<span sytle="clear:both'" id="added"></span>
+</div>
+</BODY>
+</HTML>
+

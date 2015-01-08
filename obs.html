@@ -1,0 +1,110 @@
+<html>
+ 
+<head>
+ <style>
+ 
+ #leftcolumn {
+width: 500px;
+float left;
+margin-top:50px;
+margin-right:4px;
+margin-left: 0px;
+ }
+ 
+ #container {
+ background-color: white;
+width: 1000px;
+position:fixed;
+top:0px;
+left:275px;
+bottom:125px;
+
+ 
+ }
+ </style>
+ 
+</head>
+ 
+ 
+
+ <body style="background-image:url('Background.png');background-repeat:no-repeat;background-position:right top;background-color:#000066;color:#FFFFFF">
+ 
+<div id="leftcolumn">
+
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+<form>
+<td colspan="4" align="right" valign="middle">
+	<font>In:<input class="calc" TYPE="TEXT" NAME="IN" SIZE="2" onChange="eval('MB.value = ' + this.form.mb_expr.value)"><input type="hidden" name="in_expr" value="0.0295299860 * MB.value">
+	Mb:<input class="calc" TYPE="TEXT" NAME="MB" SIZE="2" onChange="eval('IN.value = ' + this.form.in_expr.value)"><input type="hidden" name="mb_expr" value="Math.round(3386.3883333 * IN.value)/100"></font></td>
+<td colspan="2" align="center" valign="middle"><input type="button" value="Calc" class="button10calc"><input type="reset" value="Reset" class="button10calc"></font></td>
+</form>
+<form>
+<td colspan="3" align="center" valign="middle">
+	<font>F:&nbsp;<input class="calc" type="text" size="2" name="F" value="32" onChange="eval('C.value = ' + this.form.C_expr.value)"><input type="hidden" name="F_expr" value="(212-32)/100 * C.value + 32 ">
+	C:&nbsp;<input class="calc" type="text" size="2" name="C" value="0" onChange="eval('F.value = ' + this.form.F_expr.value)"><input type="hidden" name="C_expr" value="100/(212-32) * (F.value - 32 )"></td>
+<td colspan="4" align="left" valign="middle">
+	<input type="button" value="Calc" class="button10calc"><input type="reset" value="Reset" class="button10calc"></font></td></form>
+</br>
+</br>
+
+	
+		
+		<FORM name="textForm" method="get" action="http://www.aviationweather.gov/adds/metars/" target="display">
+		<TABLE SUMMARY="This table is used for formatting purposes only"
+			ALIGN="left" BORDER=0 CELLSPACING=0 CELLPADDING=3>
+			<TR>
+				<TD ALIGN="left"><INPUT SIZE=14 NAME="station_ids" TYPE="text" style="text-transform:uppercase" on keyup="javascript:this.value=this.value.toUpperCase();" autocomplete="off"  >&#160;&#160;&#160;
+				</TD>
+				<TD ALIGN="left"><INPUT TYPE="radio" NAME="std_trans"
+					VALUE="standard" CHECKED>&#160;Raw&#160;Format<BR>
+				<INPUT TYPE="radio" NAME="std_trans" VALUE="translated">&#160;Translated
+				</TD>
+			</TR>
+		</TABLE>
+		<BR CLEAR=ALL>
+		<INPUT TYPE="checkbox" NAME="chk_metars" checked>&#160;METARs&#160;&#160;&#160;
+		<SELECT name="hoursStr">
+			<OPTION >most recent only</OPTION>
+			<OPTION>past 1 hours</OPTION>
+			<OPTION>past 2 hours</OPTION>
+			<OPTION SELECTED>past 3 hours</OPTION>
+			<OPTION>past 4 hours</OPTION>
+			<OPTION>past 5 hours</OPTION>
+			<OPTION>past 6 hours</OPTION>
+			<OPTION>past 12 hours</OPTION>
+			<OPTION>past 18 hours</OPTION>
+			<OPTION>past 24 hours</OPTION>
+			<OPTION>past 36 hours</OPTION>
+		</SELECT><BR>
+		<INPUT TYPE="checkbox" NAME="chk_tafs" checked>&#160;TAFs<BR>
+		<BR>
+		<INPUT NAME="submitmet" TYPE="submit" VALUE="Submit">&#160;<INPUT
+			TYPE="reset" VALUE="Reset FORM"></FORM>
+
+	
+<div id="container">
+
+
+<iframe sandbox="allow-forms allow-scripts allow-same-origin" name="display" id="display" width="100%" height="100%" frameborder="0" marginwidth="0" marginheight="0" src="" >
+</div>
+
+</body>
+ 
+</html>
