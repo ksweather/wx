@@ -150,17 +150,20 @@ $('button').click(function(){ // run anytime the value changes
 var firstValue = parseFloat($('#id_speed').val()); // get value of field
 var secondValue = parseFloat($('#id_direction').val()); // convert it to a float
 var thirdValue = parseFloat($('#id_runway').val());
+var magValue = parseFloat($('#id_mag').val());
 
-$('#added').html(Math.round(Math.abs(Math.sin((Math.PI *(secondValue/180)) - Math.PI *(thirdValue/180))*  firstValue  ))+" KTS"); // add them and output it
+$('#added').html(Math.round(Math.abs(Math.sin((Math.PI *(secondValue/180)) - Math.PI *((thirdValue-(0-magValue))/180))*  firstValue  ))+" KTS"); // add them and output it
 });
 
 
 });//]]>  
 
-</script>	
+</script>		
 </BR>
 <div id="title">CROSS WIND</div>
 <div align="left">
+<input SIZE=8 type="text" id="id_mag" value="0" autocomplete="off"/>
+<label for="direction">MAGNETIC DECLINATION</label></br>
 <input SIZE=8 type="text" id="id_direction"autocomplete="off"/>
 <label for="direction">DIRECTION</label></br>
 
