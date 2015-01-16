@@ -1,54 +1,77 @@
 
-<!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
-    
-    <style>
-      html, body, #map-canvas {
-        height: 100%;
-        margin: 0px;
-        padding: 0px
-      }
-    </style>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-    <script>
-function initialize() {
-  var myLatlng = new google.maps.LatLng(39.50, -98.35);
-  var mapOptions = {
-    zoom: 6,
-    center: myLatlng
-  };
+ 
+<head>
 
-  var map = new google.maps.Map(document.getElementById('map-canvas'),
-      mapOptions);
+<title>Weather Briefer</title>
+<link rel="shortcut icon" href="/jefferson.ico" />
+<link rel="icon" href="/jefferson.ico" />
+ 
+ <style>
+ #leftcolumn {
+width: 200px;
+float left;
+margin-right:4px;
+margin-left: 10px;
 
-  var kmlLayer = new google.maps.KmlLayer({
-    url: 'http://wdssii.nssl.noaa.gov/realtime/nws_warnings.kmz',
-    suppressInfoWindows: true,
-    map: map
-  });
+ }
+ 
+ #container {
+width: 1600px;
+position:fixed;
+top:0px;
+left:200px;
 
-  google.maps.event.addListener(kmlLayer, 'click', function(kmlEvent) {
-    var text = kmlEvent.featureData.description;
-    showInContentWindow(text);
-  });
-
-  function showInContentWindow(text) {
-    var sidediv = document.getElementById('content-window');
-    sidediv.innerHTML = text;
-  }
+ 
+ }
+ </style>
+ 
+<script type="text/javascript">
+function jsFilter(strInc)
+{
+document.getElementByID("display").src =  ';
 }
+</script>
+ 
+</head>
+ 
+ 
 
-google.maps.event.addDomListener(window, 'load', initialize);
+ <body style="background-image:url('Background.png');background-repeat:no-repeat;background-position:right top;background-color:#000066;color:#FFFFFF">
 
-    </script>
-  </head>
-<body style="background-image:url('Background.png');background-repeat:no-repeat;background-position:right top;background-color:white;">
-	<div id="content-window" style="width:40%; height:100%; float:left"></div>
-    <div id="map-canvas" style="width:50%; height:50%; float:left"></div>
 
-    
-  </body>
+<div id="leftcolumn">
+<h2 class="left"> </h2>
+
+
+
+
+</br>
+</br>
+<button type='button' onClick="document.getElementById('display').src='severemap.html' ">WARNINGS </button>
+
+</br>
+<button type='button' onClick="document.getElementById('display').src='kml.html' ">Storm Reports </button>
+
+</br>
+<button type='button' onClick="document.getElementById('display').src='watchmap.html' ">WATCHES </button>
+
+</br>
+
+
+
+
+
+<div id="container">
+
+
+<iframe sandbox="allow-forms allow-scripts allow-same-origin" name="display" id="display" width="100%" height="100%" frameborder="0" marginwidth="0" marginheight="0" src="severemap.html" >
+</div>
+ 
+</body>
+ 
 </html>
+
+
+
+
