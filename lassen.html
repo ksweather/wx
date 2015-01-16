@@ -1,0 +1,58 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+ 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+<head> 
+<style>
+#feed {
+ background-color: white;
+width: 1000px;
+position:fixed;
+top:0px;
+left:375px;
+bottom:125px;
+ }
+</style>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+ 
+	<title>Lassen County Weather Alerts</title> 
+	
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script> 
+    <script type="text/javascript">
+    google.load("feeds", "1");
+    google.setOnLoadCallback(showFeed);
+ 
+    function showFeed() {
+      var feed = new google.feeds.Feed("http://alerts.weather.gov/cap/wwaatmget.php?x=CAC035&y=0");
+	  feed.setNumEntries(10);
+      feed.load(function(result) {
+        if (!result.error) {
+		  var container = document.getElementById("headlines");
+          for (var i = 0; i < result.feed.entries.length; i++) {
+            var entry = result.feed.entries[i];
+            var li = document.createElement("li");
+            li.innerHTML = '<h3><a href="' + entry.link + '">' + entry.title + '</a> <cite>' +  '</cite></h3>';
+            li.innerHTML += '<p>' + entry.content + '</p>';
+			
+            container.appendChild(li);
+          }
+        } else {
+			var container = document.getElementById("headlines");
+		    container.innerHTML = '<li><a href="http://sitepoint.com">Get your geek news fix at SitePoint</a></li>';
+		}
+      });
+    }
+    </script>
+	
+</head> 
+ 
+<body style="background-image:url('Background.png');background-repeat:no-repeat;background-position:right top;background-color:#000066;">
+	<div id="feed">
+	<h1>Lassen County Weather Alerts</h1>
+	<ul id="headlines"></ul> 
+	</div>
+ 
+ 
+</body> 
+</html>
