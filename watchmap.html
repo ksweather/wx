@@ -26,9 +26,8 @@ var map = new google.maps.Map(document.getElementById("map-canvas"),
   var kmlLayer = new google.maps.KmlLayer({
     url: 'http://wdssii.nssl.noaa.gov/realtime/warnings/NWS_Warnings.kml',
     suppressInfoWindows: true,
-    preserveViewport: true,
-    map: map
-    
+    map: map,
+    preserveViewport: true
     
   });
  google.maps.event.addListener(kmlLayer, 'click', function(event) {
