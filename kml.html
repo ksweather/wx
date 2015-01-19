@@ -14,7 +14,7 @@
     <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script>
 function initialize() {
-var myLatlng = new google.maps.LatLng(-34.397, 150.644);
+var myLatlng = new google.maps.LatLng(39.828127, -98.579404);
 var mapOptions = {
   zoom: 8,
   center: myLatlng,
@@ -28,6 +28,7 @@ var map = new google.maps.Map(document.getElementById("map-canvas"),
   var kmlLayer = new google.maps.KmlLayer({
     url: 'http://www.wrh.noaa.gov/sgx/kml/kml.php?wfo=sgx&file=lsr_all.kml',
     suppressInfoWindows: true,
+    preserveViewport: true,
     map: map
     
 
