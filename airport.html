@@ -19,7 +19,6 @@ top:0px;
 left:240px;
 bottom:125px;
 }
-
  #title{
 	background-color:0066FF;
 	margin-top:200px;
@@ -36,6 +35,31 @@ bottom:125px;
  
 <div id="leftcolumn" align="center">
 
+	<div id="title" align="center" >AIRNAV</div>
+
+
+
+	<div>ENTER ICAO or CITY</div>
+    
+      
+      
+          <div><input type="text" id="userInput" name="s" size="25" placeholder="Airport ID or name" autocorrect="off" autocapitalize="off" autocomplete="off" value="">
+		   <input type="button" value="submit" onclick="changeLink()">
+   
+   <script>
+   function changeLink(){
+	var str1="http://www.airnav.com/airport/";
+	var str2="";
+	
+	str2 = document.getElementById("userInput").value;
+	var res = str1.concat(str2);
+	document.getElementById("display").src = res;
+ 
+	}
+	</script>
+		 
+
+
 	<div id="title" align="center" >AIRPORT DATA</div>
 
 
@@ -44,7 +68,7 @@ bottom:125px;
     <form action="http://www.worldaerodata.com/wad.cgi?" method="GET" target="display">
       
       
-          <div><input name="search" type ="text" size="15" value"" autocomplete="off"> <input type="submit" value="GO"></div>
+          <div><input name="search" type ="text" size="15" value"" placeholder="Airport ID or name" autocomplete="off"> <input type="submit" value="GO"></div>
 		   <div><input type="hidden" name="apt_nv" value="1"></div>
 		 
       
@@ -54,23 +78,15 @@ bottom:125px;
       
     </form>
 
-	<div id="title" align="center" >AIRNAV</div>
 
-
-
-	<div>ENTER ICAO or CITY</div>
-    <form action="http://www.airnav.com/airport/" method="POST" target="display">
-      
-      
-          <div><input type="text" name="s" size="25" placeholder="Airport ID or name" autocorrect="off" autocapitalize="off" autocomplete="off" value="">
-		   <input type="submit" value="GO"></div>
-		 
       
       
       
 
       
-    </form>	
+    
+	
+	
 <div id="container">
 
 
