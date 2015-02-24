@@ -98,12 +98,12 @@ ENTER LAT/LONG </BR>
       
       
       
-      <input size="8" name="sta" placeholder="ICAO: KBNY" TYPE="text" style="text-transform:uppercase" on keyup="javascript:this.value=this.value.toUpperCase();" autocomplete="off">
+      <input size="8" name="sta" placeholder="ICAO: KVCB" TYPE="text" style="text-transform:uppercase" on keyup="javascript:this.value=this.value.toUpperCase();" autocomplete="off">
       
       <select size="1" onChange="this.form.action=this.options[this.selectedIndex].value;">
       <option value="ERROR">Select MODEL</option>
-      <option value="http://www.nws.noaa.gov/cgi-bin/lamp/getlav.pl" name="model" value="GFS">GFS</option>
-      <option value="http://www.nws.noaa.gov/cgi-bin/mos/getmet.pl" name="model" value="NAM">NAM</option>
+      <option value="http://www.nws.noaa.gov/cgi-bin/lamp/getlav.pl" name="model" value="GFS LAMP">GFS</option>
+      <option value="http://www.nws.noaa.gov/cgi-bin/mos/getmet.pl" name="model" value="NAM MOS">NAM</option>
  
       <input type="submit"  value="submit" >
     </form>
