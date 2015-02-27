@@ -115,22 +115,26 @@ table {
 
 	
 <div id="title">SKEWT'S</div>
-<form id="ClassSearch" method="GET" action=javascript:action target="display">
-      
-      
-      
-      
+		<FORM name="textForm" method="get" action="http://beta.wxcaster.com/cgi-bin/parse_skewt_trace_loop5.cgi" target="display">
+			
+			<SELECT name="model">
+			<OPTION >NAM</OPTION>
+			<OPTION>GFS</OPTION>
+	
+			</SELECT><BR>
+			
+			
+				<INPUT SIZE=14 NAME="STATIONID"placeholder="ICAO:KBNY" TYPE="text" style="text-transform:uppercase" on keyup="javascript:this.value=this.value.toUpperCase();" autocomplete="off"  >
+				
+				
+				
+		
+		
+		
 
 
-      <input size="8" name="STATIONID" placeholder="ICAO: KBNY" TYPE="text" style="text-transform:uppercase" on keyup="javascript:this.value=this.value.toUpperCase();" autocomplete="off">
-      
-      <select size="1" onChange="this.form.action=this.options[this.selectedIndex].value;">
-      <option value="ERROR">Select MODEL</option>
-      <option value="http://beta.wxcaster.com/cgi-bin/parse_skewt_trace_loop5.cgi" name="model" value="GFS">GFS</option>
-      <option value="http://beta.wxcaster.com/cgi-bin/parse_skewt_trace_loop5.cgi" name="model" value="NAM">NAM</option>
- 
-      <input type="submit"  value="submit" >
-    </form>
+		
+		<INPUT NAME="submitmet" TYPE="submit" VALUE="Submit">
 	
 <div id="title">ADDS</div>
 		
@@ -287,7 +291,7 @@ $('#crosswind').val(Math.round(xwind*10)/10); // add them and output it  <div sy
 <div id="container">
 
 
-<iframe sandbox="allow-forms allow-scripts allow-same-origin"  name="display" id="display" width="100%" height="100%" frameborder="0" marginwidth="0" marginheight="0" src="http://beta.wxcaster.com/cgi-bin/parse_skewt_trace_loop5.cgi?model=NAM&STATIONID=kbny" >
+<iframe sandbox="allow-forms allow-scripts allow-same-origin"  name="display" id="display" width="100%" height="100%" frameborder="0" marginwidth="0" marginheight="0" src="" >
 </div>
 
 </body>
