@@ -133,7 +133,7 @@ table {
 		
 			
 			
-				<INPUT SIZE=14 NAME="station_ids" TYPE="text" style="text-transform:uppercase" on keyup="javascript:this.value=this.value.toUpperCase();" autocomplete="off"  >
+				<INPUT SIZE=14 NAME="station_ids"placeholder="ICAO: KMHS KRDD KATT" TYPE="text" style="text-transform:uppercase" on keyup="javascript:this.value=this.value.toUpperCase();" autocomplete="off"  >
 				<input type="hidden" name="std_trans" value="standard">
 				
 				
@@ -152,10 +152,12 @@ table {
 			<OPTION>past 18 hours</OPTION>
 			<OPTION>past 24 hours</OPTION>
 			<OPTION>past 36 hours</OPTION>
+			<OPTION>past 96 hours</OPTION>
 		</SELECT><BR>
 		
 		<INPUT TYPE="checkbox" NAME="chk_metars" checked>&#160;METARs&#160;&#160;&#160;
 		<INPUT TYPE="checkbox" NAME="chk_tafs" checked>&#160;TAFs<BR>
+		
 		
 		<INPUT NAME="submitmet" TYPE="submit" VALUE="Submit">&#160;<BR>
 <script type='text/javascript'>//<![CDATA[ 
