@@ -115,34 +115,25 @@ table {
 
 	
 <div id="title">SKEWT'S</div>
-		<FORM name="textForm" method="get" action="http://beta.wxcaster.com/cgi-bin/parse_skewt_trace_loop5.cgi" target="display">
-			
-			<SELECT name="model">
-			<OPTION >NAM</OPTION>
-			<OPTION>GFS</OPTION>
+    <form action="http://beta.wxcaster.com/cgi-bin/parse_skewt_trace_loop2.cgi" method="GET" target="display">
+      
+      
+            <select class="productViewerParameter" name="model"><option value="GFS">GFS</option><option value="NAM" selected="selected">NAM</option></select>
+            <input size="8" name="STATIONID" TYPE="text" style="text-transform:uppercase" on keyup="javascript:this.value=this.value.toUpperCase();" autocomplete="off">
+      
+      
+      
+
+      <div><input type="submit"  value="submit" ></div>
+    </form>
 	
-			</SELECT>
-			
-			
-				<INPUT SIZE=14 NAME="STATIONID"placeholder="ICAO:KBNY" TYPE="text" style="text-transform:uppercase" on keyup="javascript:this.value=this.value.toUpperCase();" autocomplete="off"  >
-				
-				
-				
-		
-		
-		
-
-
-		
-		<INPUT NAME="submitmet" TYPE="submit" VALUE="Submit">
-	</form>
 <div id="title">ADDS</div>
 		
 		<FORM name="textForm" method="get" action="http://www.aviationweather.gov/adds/metars/" target="display">
 		
 			
 			
-				<INPUT SIZE=14 NAME="station_ids"placeholder="ICAO: KMHS KRDD KATT" TYPE="text" style="text-transform:uppercase" on keyup="javascript:this.value=this.value.toUpperCase();" autocomplete="off"  >
+				<INPUT SIZE=14 NAME="station_ids" TYPE="text" style="text-transform:uppercase" on keyup="javascript:this.value=this.value.toUpperCase();" autocomplete="off"  >
 				<input type="hidden" name="std_trans" value="standard">
 				
 				
@@ -161,15 +152,12 @@ table {
 			<OPTION>past 18 hours</OPTION>
 			<OPTION>past 24 hours</OPTION>
 			<OPTION>past 36 hours</OPTION>
-			<OPTION>past 96 hours</OPTION>
 		</SELECT><BR>
 		
 		<INPUT TYPE="checkbox" NAME="chk_metars" checked>&#160;METARs&#160;&#160;&#160;
 		<INPUT TYPE="checkbox" NAME="chk_tafs" checked>&#160;TAFs<BR>
 		
-		<INPUT NAME="button" TYPE="submit" VALUE="submit">&#160;<BR>
-
-</form>		
+		<INPUT NAME="submitmet" TYPE="submit" VALUE="Submit">&#160;<BR>
 <script type='text/javascript'>//<![CDATA[ 
 $(window).load(function(){
 $('button').click(function(){ // run anytime the value changes
