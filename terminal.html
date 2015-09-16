@@ -30,7 +30,6 @@ bottom:125px;
 	border-width:medium;
 	
 }
-
  #added{
 	background-color:0066FF;
 	border-style:solid;
@@ -52,18 +51,16 @@ text-align:center;
 #crosswind{ 
 text-align:right; 
 }
-
 table {
 	color:#000000
 }
-
  </style>
  
 </head>
  
  
 
- <body style="background-image:url('Background.png');background-repeat:no-repeat;background-position:right top;background-color:#000066;color:#FFFFFF">
+ <body style="background-repeat:no-repeat;background-position:right top;background-color:#000066;color:#FFFFFF">
  
 <div id="leftcolumn" align="center">
 
@@ -87,18 +84,32 @@ table {
 
 	
 <div id="title">SKEWT'S</div>
-    <form action="http://beta.wxcaster.com/cgi-bin/parse_skewt_trace_loop5.cgi" method="GET" target="display">
-      
-      
-            <select class="productViewerParameter" name="model"><option value="GFS">GFS</option><option value="NAM" selected="selected">NAM</option></select>
-            <INPUT SIZE=14 NAME="STATIONID"placeholder="ICAO:KBNY" TYPE="text" style="text-transform:uppercase" on keyup="javascript:this.value=this.value.toUpperCase();" autocomplete="off"  >
-      
-      
-      
+   <form action="http://beta.wxcaster.com/cgi-bin/parse_skewt_trace_loop5.cgi" method="GET" target="display">
 
-      <div><input type="submit"  value="submit" ></div>
+	  <input type="hidden" id="modelSelect" name="model" value="">	
+		
+      <input size="8" name="STATIONID" placeholder="ICAO: KBNY" TYPE="text" style="text-transform:uppercase" on keyup="javascript:this.value=this.value.toUpperCase();" autocomplete="off">
+      
+      <select size="1" id="modelChange" onchange="setmodel()">
+      <option value="ERROR">Select MODEL</option>
+      <option value="GFS">GFS</option>
+      <option value="NAM">NAM</option>
+ 
+      <input type="submit"  value="submit" >
     </form>
-	
+ <script type="text/javascript">
+ function setmodel(){
+ 
+
+	 
+	 var e = document.getElementById("modelChange");
+	 var strUser = e.options[e.selectedIndex].value;
+	 
+	 document.getElementById("modelSelect").value = strUser;
+     
+ }
+ </script>
+
 <div id="title">ADDS</div>
 		
 		<FORM name="textForm" method="get" action="http://www.aviationweather.gov/adds/metars/" target="display">
@@ -132,6 +143,8 @@ table {
 		
 		
 		<INPUT NAME="submitmet" TYPE="submit" VALUE="Submit">&#160;<BR>
+		
+		</form>
 			
 				<div id="title" align="center" >METEOGRAMS</div>
 	
@@ -144,7 +157,7 @@ table {
       
       
       
-      <input type="hidden" name="model" value="NAM">
+      <input type="hidden" name="model" value="">
       
       
       <input type="hidden" name="raster" value="2">
@@ -165,7 +178,6 @@ table {
 <script type='text/javascript'>//<![CDATA[ 
 $(window).load(function(){
 $('button').click(function(){ // run anytime the value changes
-
 var firstValue = parseFloat($('#id_speed').val()); // get value of field
 var secondValue = parseFloat($('#id_direction').val()); // convert it to a float
 var thirdValue = parseFloat($('#id_runway').val());
@@ -173,12 +185,8 @@ var magValue = parseFloat($('#id_mag').val());
 var dirdiff = (secondValue-thirdValue-(0-magValue))
 var xwind = (Math.abs(firstValue* Math.sin(0.0174 * dirdiff)))
 $('#crosswind').val(Math.round(xwind*10)/10); // add them and output it  <div sytle="clear:both'" align="center" id="added">XWIND</div><BR>
-
 });
-
-
 });//]]>  
-
 </script>	
 </BR>
 <div id="title">CROSS WIND</div>
