@@ -83,35 +83,7 @@ table {
 	<input type="button" value="Calc" class="button10calc"><input type="reset" value="Reset" class="button10calc"></font></td></form>
 	
 		
-	<div id="title" align="center" >METEOGRAMS</div>
-	
-	
 
-
-<form id="ClassSearch" method="GET" action=javascript:action target="display">
-      
-      
-      
-      
-      
-      <input type="hidden" name="model" value="NAM">
-      
-      
-      <input type="hidden" name="raster" value="2">
-      
-      <input type="hidden" name="vector" value="0">
-      
-       
-      <input type="hidden" name="clouds" value="0">
-      <input size="8" name="STATIONID" placeholder="ICAO: KBNY" TYPE="text" style="text-transform:uppercase" on keyup="javascript:this.value=this.value.toUpperCase();" autocomplete="off">
-      
-      <select size="1" onChange="this.form.action=this.options[this.selectedIndex].value;">
-      <option value="ERROR">Select MODEL</option>
-      <option value="http://charlie.wxcaster.com/cgi-bin/GFSCrosssectionsWxCaster.cgi" name="model" value="GFS">GFS</option>
-      <option value="http://charlie.wxcaster.com/cgi-bin/NAMCrosssectionsWxCaster.cgi" name="model" value="NAM">NAM</option>
- 
-      <input type="submit"  value="submit">
-    </form>
 
 	
 <div id="title">SKEWT'S</div>
@@ -160,6 +132,36 @@ table {
 		
 		
 		<INPUT NAME="submitmet" TYPE="submit" VALUE="Submit">&#160;<BR>
+			
+				<div id="title" align="center" >METEOGRAMS</div>
+	
+	
+
+
+<form id="ClassSearch" method="GET" action=javascript:action target="display">
+      
+      
+      
+      
+      
+      <input type="hidden" name="model" value="NAM">
+      
+      
+      <input type="hidden" name="raster" value="2">
+      
+      <input type="hidden" name="vector" value="0">
+      
+       
+      <input type="hidden" name="clouds" value="0">
+      <input size="8" name="STATIONID" placeholder="ICAO: KBNY" TYPE="text" style="text-transform:uppercase" on keyup="javascript:this.value=this.value.toUpperCase();" autocomplete="off">
+      
+      <select size="1" onChange="this.form.action=this.options[this.selectedIndex].value;">
+      <option value="ERROR">Select MODEL</option>
+      <option value="http://charlie.wxcaster.com/cgi-bin/GFSCrosssectionsWxCaster.cgi" name="model" value="GFS">GFS</option>
+      <option value="http://charlie.wxcaster.com/cgi-bin/NAMCrosssectionsWxCaster.cgi" name="model" value="NAM">NAM</option>
+ 
+      <input type="submit"  value="submit">
+    </form>
 <script type='text/javascript'>//<![CDATA[ 
 $(window).load(function(){
 $('button').click(function(){ // run anytime the value changes
