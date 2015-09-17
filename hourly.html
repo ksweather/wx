@@ -1,3 +1,4 @@
+
 <html>
  
 <head>
@@ -29,7 +30,12 @@ bottom:125px;
 	border-width:medium;
 	
 }
-
+#time_period{
+ width:88px;   
+}
+#model{
+ width:88px;   
+}
 
 
  </style>
@@ -91,7 +97,7 @@ ENTER LAT/LONG </BR>
 	
 
 
-<form id="ClassSearch" method="GET" action=javascript:action target="display">
+<form id="ClassSearch" method="post" action=javascript:action target="display">
       
       
       
@@ -106,12 +112,61 @@ ENTER LAT/LONG </BR>
       <option value="http://www.nws.noaa.gov/cgi-bin/mos/getmet.pl" name="model" value="NAM MOS">NAM</option>
  
       <input type="submit"  value="submit" >
-    </form>
+	  
+	     </form>
+		 
+		 <div id="title">Extracted Data</div>
+		 <div align="left">
+		
+
+	<form id="weather" method="post" action="http://leonardo.met.tamu.edu/Weather_Interface/" target="display">
+		<input SIZE=8 type="text" id="station" name="station" value=""/><label for="station">: Select a station</label>
+
+		
+		<select id="time_period"  name="time_period">
+<option value="0" selected="selected">0: Last</option>
+<option value="1">1: Past 3-hours</option>
+<option value="2">2: Past 6-hours</option>
+<option value="3">3: Past 12-hours</option>
+<option value="4">4: Past 24-hours</option>
+<option value="5">5: Past 36-hours</option>
+<option value="6">6: Past 48-hours</option>
+<option value="7">7: Today</option>
+<option value="8">8: Yesterday</option>
+</select><label for="time_period">: Select a time period </label>
+
+
+<input type="hidden" name="category" value="model_data">
+
+<select  id="model" name="model">
+<option value="1">1: NAM FOUS Forecasts</option>
+<option value="2">2: NAM MOS Forecasts</option>
+<option value="3">3: GFS MOS Forecasts</option>
+<option value="4">4: GFSX MOS Forecasts</option>
+<option value="5">5: All Guidance Forecasts</option>
+<option value="6">6: NAM Grid Interpolations</option>
+<option value="7">7: RUC Grid Interpolations</option>
+<option value="8" selected="selected">8: GFS Grid Interpolations</option>
+<option value="9">9: GFS 5-Day Interpolations</option>
+<option value="10">10: Global Grid Interpolations</option>
+<option value="11">11: MRF Grid Interpolations</option>
+<option value="12">12: GFS/MRF Grid Combo</option>
+</select><label for="model">:Model Data</label>
+<br/>
+
+
+		
+		<input type="hidden" name="_submit_check" value="1" />
+		<input type="submit" name="submit" value="Get Data"/>
+		<input type="reset" name="reset" value="Reset"/>
+	</form>
+	
+	
 
 <div id="container">
 
 
-<iframe sandbox="allow-forms allow-scripts allow-same-origin " name="display" id="display" width="100%" height="100%" frameborder="0" marginwidth="0" marginheight="0" src="nws_regions.gif" >
+<iframe sandbox="allow-forms allow-scripts allow-same-origin " name="display" id="display" width="100%" height="100%" frameborder="0" marginwidth="0" marginheight="0" src="" >
 </div>
 
 </body>
