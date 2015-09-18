@@ -44,27 +44,28 @@ bottom:125px;
  
  
 
- <body style="background-image:url('Background.png');background-repeat:no-repeat;background-position:right top;background-color:#000066;color:#FFFFFF">
+ <body style="background-repeat:no-repeat;background-position:right top;background-color:#000066;color:#FFFFFF">
  
 <div id="leftcolumn" align="center">
 
-	<div id="title" align="center" >Hourly Graph</div>
+	<div id="title" align="center" >Hourly Graph ICAO</div>
 	
-	<div>
-ENTER LAT/LONG </BR> 
+	<div align="left">
+
+<div><input name="location" size="8" id="location" type ="text" placeholder="KBNY" size="15" value"" style="text-transform:uppercase" on keyup="javascript:this.value=this.value.toUpperCase();" autocomplete="off" ><label for="location">:ENTER ICAO</label</div>
     <form action="http://forecast.weather.gov/MapClick.php?" method="GET" target="display">
       
-          
-          <div><input name="lat" type ="text" placeholder="41.02" size="15" value"" autocomplete="off" label="Lat"><label for="lat">:LAT</label></div>
-		  <div><input name="lon" type ="text" placeholder="-121.43" size="15" value"" autocomplete="off" label="Long"><label for="lat">:LONG</label></div>
-		<div><select  name="unit">
+          <input type="hidden" id="latitude" name="lat" value="">	
+          <input type="hidden" id="longitude" name="lon" value="">	
+		  
+		<select  name="unit">
 					<option value="0">F</option>
 					<option value="1">C</option>
-					</select></div>
-			<div><input type="hidden" name="w3u" value="0"></div>
-			<div><input type="hidden" name="lg" value="english"></div>
-			<div><input type="hidden" name="FcstType" value="graphical"></div>
-			<div><input type="submit" value="GO"></div>
+					</select>
+			<input type="hidden" name="w3u" value="0">
+			<input type="hidden" name="lg" value="english">
+			<input type="hidden" name="FcstType" value="graphical">
+			<input type="submit" value="GO" onclick = "setmodel()" > 
 		   
 		 </div>
       
@@ -74,46 +75,524 @@ ENTER LAT/LONG </BR>
       
     </form>
 	
-<div id="title" align="center" >Weather Table</div>
-	<form id="ClassSearch" method="GET" action=javascript:action target="top">
-      
-      
-      
-       <div><input name="lat" type ="text" placeholder="41.02" size="15" value"" autocomplete="off" label="Lat"><label for="lat">:LAT</label></div>
-		 <div><input name="lon" type ="text" placeholder="-121.43" size="15" value"" autocomplete="off" label="Long"><label for="long">:LONG</label></div>
+	 <script type="text/javascript">
+ function setmodel(){
+     
+	 
 
+ 
+     var e = document.getElementById("location").value;
+	
+	 	 if (e == "KBAB") {
+     e = ["39.12", "-121.42"];}
+	 
+	 	 	 if (e == "KSUU") {
+     e = ["38.27", "-121.92"];}
+	 	 
+	 	 	 if (e == "KVBG") {
+     e = ["34.63", "-120.57"];}
+	 	 	 
+	 	 	 if (e == "KRIV") {
+     e = ["33.87", "-117.27"];}
+	 
+			 if (e == "KVCB") {
+     e = ["38.38", "-121.95"];}
+
+	 		 if (e == "KSMF") {
+     e = ["38.70", "-121.60"];}
+	 
+	 		 if (e == "KEDW") {
+     e = ["34.88", "-117.87"];}
+
+	 		  if (e == "KBNY") {
+     e = ["40.87", "-121.67"];}
+
+	 	 	  if (e == "O89" || e == "o89") {
+     e = ["41.02", "-121.43"];}
+	 
+	 	 	  if (e == "KAAT") {
+     e = ["41.49", "-120.56"];}
+	 
+	 	 	  if (e == "KRDD") {
+     e = ["40.52", "-122.30"];}
+
+	 	 	  if (e == "KMHS") {
+     e = ["41.32", "-122.32"];}	 
+	 
+	 	 	  if (e == "KRNO") {
+     e = ["39.48", "-119.77"];}	
+
+	 	 	  if (e == "KLSV") {
+     e = ["36.22", "-115.02"];}	 
+
+	 	 	  if (e == "KINS") {
+     e = ["36.58", "-115.67"];}	 	 
+	 
+	 	 	  if (e == "KTCM") {
+     e = ["47.12", "-122.47"];}
+
+	 	 	  if (e == "KSKA") {
+     e = ["47.62", "-117.65"];}	
+
+	 	 	  if (e == "KMUO") {
+     e = ["43.03", "-115.87"];}	
+
+	 	 	  if (e == "KHIF") {
+     e = ["41.12", "-111.97"];}	
+
+	 	 	  if (e == "KLUF") {
+     e = ["33.52", "-112.37"];}	
+
+	 	 	  if (e == "KDMA") {
+     e = ["32.17", "-110.87"];}	
+
+	 	 	  if (e == "KGFA") {
+     e = ["47.50", "-111.17"];}	
+
+	 	 	  if (e == "KFEW") {
+     e = ["41.15", "-104.82"];}	
+
+	 	 	  if (e == "KCYS") {
+     e = ["41.15", "-104.82"];}	
+
+	 	 	  if (e == "KBKF") {
+     e = ["39.72", "-104.75"];}
+
+	 	 	  if (e == "KAFF") {
+     e = ["38.97", "-104.82"];}
+
+	 	 	  if (e == "KAFF") {
+     e = ["38.97", "-104.82"];}
+
+	 	 	  if (e == "KCOS") {
+     e = ["38.82", "-104.72"];}
+
+	 	 	  if (e == "KCOS") {
+     e = ["38.82", "-104.72"];}
+
+	 	 	  if (e == "KSHM") {
+     e = ["38.82", "-104.72"];}
+
+	 	 	  if (e == "KCVS") {
+     e = ["34.37", "-103.32"];}
+
+	 	 	  if (e == "KABQ") {
+     e = ["35.05", "-106.62"];}
+
+	 	 	  if (e == "KABQ") {
+     e = ["35.05", "-106.62"];}
+
+	 	 	  if (e == "KHMN") {
+     e = ["32.85", "-106.08"];}	
+
+	 	 	  if (e == "KMIB") {
+     e = ["48.42", "-101.33"];}
+
+	 	 	  if (e == "KRDR") {
+     e = ["47.97", "-97.40"];}
+
+	 	 	  if (e == "KRCA") {
+     e = ["44.17", "-103.10"];}
+
+	 	 	  if (e == "KOFF") {
+     e = ["41.12", "-95.92"];}
+
+	 	 	  if (e == "KIAB") {
+     e = ["37.62", "-97.27"];}
+
+	 	 	  if (e == "KEND") {
+     e = ["36.32", "-97.92"];}
+
+	 	 	  if (e == "KLTS") {
+     e = ["34.67", "-99.27"];}
+
+	 	 	  if (e == "KTIK") {
+     e = ["35.42", "-97.37"];}
+
+	 	 	  if (e == "KSPS") {
+     e = ["33.98", "-98.50"];}
+
+	 	 	  if (e == "KDYS") {
+     e = ["32.42", "-99.83"];}	
+
+	 	 	  if (e == "KDYS") {
+     e = ["32.42", "-99.83"];}
+
+	 	 	  if (e == "KSJT") {
+     e = ["31.43", "-100.40"];}
+	 
+	 	 	  if (e == "KGOF") {
+     e = ["31.43", "-100.40"];}
+
+	 	 	  if (e == "KSKF") {
+     e = ["29.37", "-98.57"];}
+	 
+	 	 	  if (e == "KRND") {
+     e = ["29.52", "-98.27"];}
+
+	 	 	  if (e == "KSZL") {
+     e = ["38.72", "-93.53"];}
+	 
+	 	 	  if (e == "KLIT") {
+     e = ["34.73", "-92.23"];}
+	 
+	 	 	  if (e == "KBAD") {
+     e = ["32.50", "-93.67"];}
+
+	 	 	  if (e == "KBLV") {
+     e = ["38.53", "-89.83"];}
+
+	 	 	  if (e == "KCBM") {
+     e = ["33.63", "-88.45"];}
+	 
+	 	 	  if (e == "KBIX") {
+     e = ["30.40", "-88.91"];}
+
+	 	 	  if (e == "KMXF") {
+     e = ["32.37", "-86.37"];}
+
+	 	 	  if (e == "KHRT") {
+     e = ["30.44", "-86.69"];}
+	 
+	 	 	  if (e == "KEGI") {
+     e = ["30.63", "-86.52"];}
+	 
+	 	 	  if (e == "KVPS") {
+     e = ["30.47", "-86.52"];}
+	 
+	 	 	  if (e == "KFFO") {
+     e = ["39.83", "-84.05"];}
+	 
+	 	 	  if (e == "KWRB") {
+     e = ["32.63", "-83.60"];}
+	 
+	 	 	  if (e == "KVAD") {
+     e = ["30.97", "-83.20"];}
+	 
+	 	 	  if (e == "KXMR") {
+     e = ["28.46", "-80.58"];}
+	 
+	 	 	  if (e == "KCOF") {
+     e = ["28.23", "-80.61"];}
+	 
+	 	 	  if (e == "KMCF") {
+     e = ["27.85", "-82.52"];}
+	 
+	 	 	  if (e == "KAGR") {
+     e = ["27.65", "-81.33"];}
+	 
+	 	 	  if (e == "KCEF") {
+     e = ["42.20", "-72.52"];}
+	 
+	 	 	  if (e == "KWRI") {
+     e = ["40.02", "-74.58"];}
+	 
+	 	 	  if (e == "KDOV") {
+     e = ["39.12", "-75.47"];}
+	 
+	 	 	  if (e == "KDOV") {
+     e = ["39.12", "-75.47"];}
+	 
+	 	 	  if (e == "KADW") {
+     e = ["38.82", "-76.87"];}
+	 
+	 	 	  if (e == "KLFI") {
+     e = ["37.09", "-76.34"];}
+
+	 	 	  if (e == "KGSB") {
+     e = ["35.32", "-77.97"];}
+	 
+	 	 	  if (e == "KPOB") {
+     e = ["35.17", "-79.02"];}
+	 
+	 	 	  if (e == "KSSC") {
+     e = ["33.97", "-80.47"];}
+	 
+	 	 	  if (e == "KCHS") {
+     e = ["32.90", "-80.03"];}
+	 
+	 
+	 
+	 
+	 
+	 
+
+	 
+	 document.getElementById("latitude").value = e[0];
+	 
+	 document.getElementById("longitude").value = e[1];
+     
+ }
+ </script>
+	
+<div id="title" align="center" >Weather Table ICAO</div>
+<input name="location" size="8" id="locationTable" type ="text" placeholder="KBNY" size="15" value"" style="text-transform:uppercase" on keyup="javascript:this.value=this.value.toUpperCase();" autocomplete="off" ><label for="location">:ENTER ICAO</label</div>
+	<form id="ClassSearch" method="GET" action="http://www.wrh.noaa.gov/forecast/wxtables/index.php?" target="diplay">
       
-      <select size="1" onChange="this.form.action=this.options[this.selectedIndex].value;">
-      <option value="ERROR">Select Region</option>
-      <option value="http://www.wrh.noaa.gov/forecast/wxtables/index.php?" >West</option>
-      <option value="http://www.crh.noaa.gov/forecast/wxtables/index.php?" >Central </option> 
+      
+      
+       <div><input name="lat" id="latTable" type ="hidden" ></div>
+		 <div><input name="lon" id="longTable"  type ="hidden" ></div>
+
+
 	  
  
-      <input type="submit"  value="submit" >
+      <input type="submit"  value="submit" onclick = "weathertable()" >
     </form>
-    
-    	<div id="title" align="center" >MOS/LAMP</div>
-	
-	
+ 	 <script type="text/javascript">
+ function weathertable(){
+     
+	 
 
-
-<form id="ClassSearch" method="post" action=javascript:action target="display">
-      
-      
-      
-      
-      
-      
-      <input size="8" name="sta" placeholder="ICAO: KVCB" TYPE="text" style="text-transform:uppercase" on keyup="javascript:this.value=this.value.toUpperCase();" autocomplete="off">
-      
-      <select size="1" onChange="this.form.action=this.options[this.selectedIndex].value;">
-      <option value="ERROR">Select MODEL</option>
-      <option value="http://www.nws.noaa.gov/cgi-bin/lamp/getlav.pl" name="model" value="GFS LAMP">GFS</option>
-      <option value="http://www.nws.noaa.gov/cgi-bin/mos/getmet.pl" name="model" value="NAM MOS">NAM</option>
  
-      <input type="submit"  value="submit" >
-	  
-	     </form>
+     var e = document.getElementById("locationTable").value;
+	
+	 	 if (e == "KBAB") {
+     e = ["39.12", "-121.42"];}
+	 
+	 	 	 if (e == "KSUU") {
+     e = ["38.27", "-121.92"];}
+	 	 
+	 	 	 if (e == "KVBG") {
+     e = ["34.63", "-120.57"];}
+	 	 	 
+	 	 	 if (e == "KRIV") {
+     e = ["33.87", "-117.27"];}
+	 
+			 if (e == "KVCB") {
+     e = ["38.38", "-121.95"];}
+
+	 		 if (e == "KSMF") {
+     e = ["38.70", "-121.60"];}
+	 
+	 		 if (e == "KEDW") {
+     e = ["34.88", "-117.87"];}
+
+	 		  if (e == "KBNY") {
+     e = ["40.87", "-121.67"];}
+
+	 	 	  if (e == "O89" || e == "o89") {
+     e = ["41.02", "-121.43"];}
+	 
+	 	 	  if (e == "KAAT") {
+     e = ["41.49", "-120.56"];}
+	 
+	 	 	  if (e == "KRDD") {
+     e = ["40.52", "-122.30"];}
+
+	 	 	  if (e == "KMHS") {
+     e = ["41.32", "-122.32"];}	 
+	 
+	 	 	  if (e == "KRNO") {
+     e = ["39.48", "-119.77"];}	
+
+	 	 	  if (e == "KLSV") {
+     e = ["36.22", "-115.02"];}	 
+
+	 	 	  if (e == "KINS") {
+     e = ["36.58", "-115.67"];}	 	 
+	 
+	 	 	  if (e == "KTCM") {
+     e = ["47.12", "-122.47"];}
+
+	 	 	  if (e == "KSKA") {
+     e = ["47.62", "-117.65"];}	
+
+	 	 	  if (e == "KMUO") {
+     e = ["43.03", "-115.87"];}	
+
+	 	 	  if (e == "KHIF") {
+     e = ["41.12", "-111.97"];}	
+
+	 	 	  if (e == "KLUF") {
+     e = ["33.52", "-112.37"];}	
+
+	 	 	  if (e == "KDMA") {
+     e = ["32.17", "-110.87"];}	
+
+	 	 	  if (e == "KGFA") {
+     e = ["47.50", "-111.17"];}	
+
+	 	 	  if (e == "KFEW") {
+     e = ["41.15", "-104.82"];}	
+
+	 	 	  if (e == "KCYS") {
+     e = ["41.15", "-104.82"];}	
+
+	 	 	  if (e == "KBKF") {
+     e = ["39.72", "-104.75"];}
+
+	 	 	  if (e == "KAFF") {
+     e = ["38.97", "-104.82"];}
+
+	 	 	  if (e == "KAFF") {
+     e = ["38.97", "-104.82"];}
+
+	 	 	  if (e == "KCOS") {
+     e = ["38.82", "-104.72"];}
+
+	 	 	  if (e == "KCOS") {
+     e = ["38.82", "-104.72"];}
+
+	 	 	  if (e == "KSHM") {
+     e = ["38.82", "-104.72"];}
+
+	 	 	  if (e == "KCVS") {
+     e = ["34.37", "-103.32"];}
+
+	 	 	  if (e == "KABQ") {
+     e = ["35.05", "-106.62"];}
+
+	 	 	  if (e == "KABQ") {
+     e = ["35.05", "-106.62"];}
+
+	 	 	  if (e == "KHMN") {
+     e = ["32.85", "-106.08"];}	
+
+	 	 	  if (e == "KMIB") {
+     e = ["48.42", "-101.33"];}
+
+	 	 	  if (e == "KRDR") {
+     e = ["47.97", "-97.40"];}
+
+	 	 	  if (e == "KRCA") {
+     e = ["44.17", "-103.10"];}
+
+	 	 	  if (e == "KOFF") {
+     e = ["41.12", "-95.92"];}
+
+	 	 	  if (e == "KIAB") {
+     e = ["37.62", "-97.27"];}
+
+	 	 	  if (e == "KEND") {
+     e = ["36.32", "-97.92"];}
+
+	 	 	  if (e == "KLTS") {
+     e = ["34.67", "-99.27"];}
+
+	 	 	  if (e == "KTIK") {
+     e = ["35.42", "-97.37"];}
+
+	 	 	  if (e == "KSPS") {
+     e = ["33.98", "-98.50"];}
+
+	 	 	  if (e == "KDYS") {
+     e = ["32.42", "-99.83"];}	
+
+	 	 	  if (e == "KDYS") {
+     e = ["32.42", "-99.83"];}
+
+	 	 	  if (e == "KSJT") {
+     e = ["31.43", "-100.40"];}
+	 
+	 	 	  if (e == "KGOF") {
+     e = ["31.43", "-100.40"];}
+
+	 	 	  if (e == "KSKF") {
+     e = ["29.37", "-98.57"];}
+	 
+	 	 	  if (e == "KRND") {
+     e = ["29.52", "-98.27"];}
+
+	 	 	  if (e == "KSZL") {
+     e = ["38.72", "-93.53"];}
+	 
+	 	 	  if (e == "KLIT") {
+     e = ["34.73", "-92.23"];}
+	 
+	 	 	  if (e == "KBAD") {
+     e = ["32.50", "-93.67"];}
+
+	 	 	  if (e == "KBLV") {
+     e = ["38.53", "-89.83"];}
+
+	 	 	  if (e == "KCBM") {
+     e = ["33.63", "-88.45"];}
+	 
+	 	 	  if (e == "KBIX") {
+     e = ["30.40", "-88.91"];}
+
+	 	 	  if (e == "KMXF") {
+     e = ["32.37", "-86.37"];}
+
+	 	 	  if (e == "KHRT") {
+     e = ["30.44", "-86.69"];}
+	 
+	 	 	  if (e == "KEGI") {
+     e = ["30.63", "-86.52"];}
+	 
+	 	 	  if (e == "KVPS") {
+     e = ["30.47", "-86.52"];}
+	 
+	 	 	  if (e == "KFFO") {
+     e = ["39.83", "-84.05"];}
+	 
+	 	 	  if (e == "KWRB") {
+     e = ["32.63", "-83.60"];}
+	 
+	 	 	  if (e == "KVAD") {
+     e = ["30.97", "-83.20"];}
+	 
+	 	 	  if (e == "KXMR") {
+     e = ["28.46", "-80.58"];}
+	 
+	 	 	  if (e == "KCOF") {
+     e = ["28.23", "-80.61"];}
+	 
+	 	 	  if (e == "KMCF") {
+     e = ["27.85", "-82.52"];}
+	 
+	 	 	  if (e == "KAGR") {
+     e = ["27.65", "-81.33"];}
+	 
+	 	 	  if (e == "KCEF") {
+     e = ["42.20", "-72.52"];}
+	 
+	 	 	  if (e == "KWRI") {
+     e = ["40.02", "-74.58"];}
+	 
+	 	 	  if (e == "KDOV") {
+     e = ["39.12", "-75.47"];}
+	 
+	 	 	  if (e == "KDOV") {
+     e = ["39.12", "-75.47"];}
+	 
+	 	 	  if (e == "KADW") {
+     e = ["38.82", "-76.87"];}
+	 
+	 	 	  if (e == "KLFI") {
+     e = ["37.09", "-76.34"];}
+
+	 	 	  if (e == "KGSB") {
+     e = ["35.32", "-77.97"];}
+	 
+	 	 	  if (e == "KPOB") {
+     e = ["35.17", "-79.02"];}
+	 
+	 	 	  if (e == "KSSC") {
+     e = ["33.97", "-80.47"];}
+	 
+	 	 	  if (e == "KCHS") {
+     e = ["32.90", "-80.03"];}
+	 
+	 
+	 
+	 
+	 
+	 
+
+	 
+	 document.getElementById("latTable").value = e[0];
+	 
+	 document.getElementById("longTable").value = e[1];
+     
+ }
+ </script>   
+
+	
+
+
+
 		 
 		 <div id="title">Extracted Data</div>
 		 <div align="left">
@@ -161,7 +640,35 @@ ENTER LAT/LONG </BR>
 		<input type="reset" name="reset" value="Reset"/>
 	</form>
 	
+<div id="title" align="center" >Weather Table LAT/LONG</div>
+	<form id="ClassSearch" method="GET" action="http://www.wrh.noaa.gov/forecast/wxtables/index.php?"target="top">
+      
+      
+      
+       <div><input name="lat" type ="text" placeholder="41.02" size="15" value"" autocomplete="off" label="Lat"><label for="lat">:LAT</label></div>
+		 <div><input name="lon" type ="text" placeholder="-121.43" size="15" value"" autocomplete="off" label="Long"><label for="long">:LONG</label></div>
+
+      <input type="submit"  value="submit" >
+    </form>	
+		<div id="title" align="center" >Hourly Graph LAT/LONG</div>
 	
+	<div align="left">
+
+    <form action="http://forecast.weather.gov/MapClick.php?" method="GET" target="display">
+      
+          
+          <div><input name="lat" type ="text" placeholder="41.02" size="15" value"" autocomplete="off" label="Lat"><label for="lat">:LAT</label></div>
+		  <div><input name="lon" type ="text" placeholder="-121.43" size="15" value"" autocomplete="off" label="Long"><label for="lat">:LONG</label></div>
+		<div><select  name="unit">
+					<option value="0">F</option>
+					<option value="1">C</option>
+					</select>
+			<input type="hidden" name="w3u" value="0">
+			<input type="hidden" name="lg" value="english">
+			<input type="hidden" name="FcstType" value="graphical">
+			<input type="submit" value="GO">
+		   
+		 </div>
 
 <div id="container">
 
