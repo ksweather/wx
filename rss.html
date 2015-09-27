@@ -1,0 +1,61 @@
+
+
+<html>
+ 
+<head>
+
+<title>Weather Briefer</title>
+<link rel="shortcut icon" href="/jefferson.ico" />
+<link rel="icon" href="/jefferson.ico" />
+ 
+ <style>
+ #leftcolumn {
+width: 180px;
+float left;
+margin-right:4px;
+margin-left: 10px;
+
+ }
+ 
+ #container {
+width: 1025px;
+height: 1100px;
+position:fixed;
+top:0px;
+left:180px;
+
+ 
+ }
+ </style>
+ 
+<script type="text/javascript">
+function jsFilter(strInc)
+{
+document.getElementByID("display").src =  ';
+}
+</script>
+ 
+</head>
+ 
+ 
+
+ <body style="background-repeat:no-repeat;background-position:right top;background-color:#000066;color:#FFFFFF">
+
+
+<div id="leftcolumn">
+<h2 class="left"> </h2>
+
+
+
+
+
+<div id="container" >
+   <div id="map-canvas" style="width:100%; height:45%; "><iframe id="display" width="100%" height="90%" frameborder="0" marginwidth="0" marginheight="0" src="shasta.html"></iframe></div>
+   <div id="content-window" style="width:100%; height:45%;"><iframe id="display" width="100%" height="90%" frameborder="0" marginwidth="0" marginheight="0" src="lassen.html"></iframe></div>
+</div>
+ 
+</body>
+ 
+</html>
+
+
