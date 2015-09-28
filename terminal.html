@@ -184,7 +184,7 @@ var thirdValue = parseFloat($('#id_runway').val());
 var magValue = parseFloat($('#id_mag').val());
 var dirdiff = (secondValue-thirdValue-(0-magValue))
 var xwind = (Math.abs(firstValue* Math.sin(0.0174 * dirdiff)))
-$('#crosswind').val(Math.round(xwind*10)/10); // add them and output it  <div sytle="clear:both'" align="center" id="added">XWIND</div><BR>
+$('#crosswind').val(Math.round((xwind*10)/10)); // add them and output it  <div sytle="clear:both'" align="center" id="added">XWIND</div><BR>
 });
 });//]]>  
 </script>	
