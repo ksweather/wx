@@ -1,4 +1,5 @@
 
+
 <html>
  
 <head>
@@ -16,7 +17,7 @@ background-color:000066;
  
  #container {
  background-color: white;
-width: 1000px;
+width: 1300px;
 height: 1000px;
 position:fixed;
 top:0px;
@@ -622,10 +623,10 @@ bottom:125px;
 <option value="2">2: NAM MOS Forecasts</option>
 <option value="3">3: GFS MOS Forecasts</option>
 <option value="4">4: GFSX MOS Forecasts</option>
-<option value="5">5: All Guidance Forecasts</option>
+<option value="5" selected="selected">5: All Guidance Forecasts</option>
 <option value="6">6: NAM Grid Interpolations</option>
 <option value="7">7: RUC Grid Interpolations</option>
-<option value="8" selected="selected">8: GFS Grid Interpolations</option>
+<option value="8">8: GFS Grid Interpolations</option>
 <option value="9">9: GFS 5-Day Interpolations</option>
 <option value="10">10: Global Grid Interpolations</option>
 <option value="11">11: MRF Grid Interpolations</option>
@@ -669,6 +670,49 @@ bottom:125px;
 			<input type="submit" value="GO">
 		   
 		 </div>
+		 
+		 
+<br>
+	<div id="title" align="center" >Extracted SFC Data</div>
+
+
+
+	<div>ENTER ICAO</div>
+    
+      
+      
+          <div><input type="text" id="userInput" name="s" size="15" placeholder="ICAO" autocorrect="off" autocapitalize="off" autocomplete="off" value="">
+		  <select  name="unit" id="unit">
+					<option value="GFS">GFS</option>
+					<option value="NAM">NAM</option>
+					</select>
+		   <input type="button" value="submit" onclick="changeLink()">
+    
+   <script>
+   function changeLink(){
+    
+	var str1="";
+	var e = document.getElementById("unit").value;
+	
+	if (e == "GFS") {
+     str1 = "http://68.226.77.253/text/1DegGFS/GFS_";}
+	if (e == "NAM") {
+     str1= "http://68.226.77.253/text/NAMSFC/NAM_";}
+	 
+	
+	var str2="";
+	var str3=".txt"
+	str2 = document.getElementById("userInput").value;
+	var res = str1.concat(str2);
+	res = res.concat(str3);
+	document.getElementById("display").src = res;
+ 
+	}
+	</script>
+
+		 
+		 
+		 
 
 <div id="container">
 
