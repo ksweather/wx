@@ -1,3 +1,4 @@
+
 <html>
  
 <head>
@@ -100,7 +101,6 @@ table {
  <script type="text/javascript">
  function setmodel(){
  
-
 	 
 	 var e = document.getElementById("modelChange");
 	 var strUser = e.options[e.selectedIndex].value;
@@ -153,7 +153,7 @@ table {
 
 <form id="ClassSearch" method="GET" action=javascript:action target="display">
       
-      
+     
       
       
       
@@ -165,17 +165,36 @@ table {
       <input type="hidden" name="vector" value="0">
       
        
-      <input type="hidden" name="clouds" value="0">
-      <input size="8" name="STATIONID" placeholder="ICAO: KBNY" TYPE="text" style="text-transform:uppercase" on keyup="javascript:this.value=this.value.toUpperCase();" autocomplete="off">
+      <input type="hidden" name="clouds" value="">
+      <input size="8" TYPE="text" name="STATIONID" placeholder="ICAO: KBNY"  style="text-transform:uppercase" on keyup="javascript:this.value=this.value.toUpperCase();" autocomplete="off">
       
       <select size="1" onChange="this.form.action=this.options[this.selectedIndex].value;">
       <option value="ERROR">Select MODEL</option>
-      <option value="http://charlie.wxcaster.com/cgi-bin/GFSCrosssectionsWxCaster.cgi" name="model" value="GFS">GFS</option>
-      <option value="http://charlie.wxcaster.com/cgi-bin/NAMCrosssectionsWxCaster.cgi" name="model" value="NAM">NAM</option>
-      <option value="http://beta.wxcaster.com/cgi-bin/GEMCrosssectionsWxCaster.cgi?" name="model" value="GEM">GEM</option>
- 
+      <option value="http://charlie.wxcaster.com/cgi-bin/GFSCrosssectionsWxCaster.cgi" name="model" value="GFS" >GFS</option>
+      <option value="http://charlie.wxcaster.com/cgi-bin/NAMCrosssectionsWxCaster.cgi" name="model" >NAM</option>
+      
       <input type="submit"  value="submit">
     </form>
+
+<FORM ACTION="http://beta.wxcaster.com/cgi-bin/GEMCrosssectionsWxCaster.cgi" target="display">
+
+      <input type="hidden" name="model" value="">
+      
+      
+      <input type="hidden" name="raster" value="2">
+      
+      <input type="hidden" name="vector" value="0">
+GEM:<input size="8" TYPE="text" name="STATIONID" placeholder="ICAO: KBNY"  style="text-transform:uppercase" on keyup="javascript:this.value=this.value.toUpperCase();" autocomplete="off">
+
+<INPUT TYPE="SUBMIT"> 
+</B>
+</FORM>	
+	
+	
+	
+	
+	
+	
 <script type='text/javascript'>//<![CDATA[ 
 $(window).load(function(){
 $('button').click(function(){ // run anytime the value changes
