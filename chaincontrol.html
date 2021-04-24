@@ -1,23 +1,127 @@
+
 <!DOCTYPE html>
 <html>
 <body>
 
-<h2>Get data as JSON from a PHP file on the server.</h2>
+
 
 <p id="demo"></p>
 
 <script>
 var xmlhttp = new XMLHttpRequest();
+var cedarpass21 ="";
+var cedarpass22 ="";
+var cedarpass22A ="";
+var west3 ="";
+var sage10 ="";
+var sage11 ="";
+
 
 xmlhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
     myObj = JSON.parse(this.responseText);
-    document.getElementById("demo").innerHTML = myObj.data[0].cc.statusData.status;
+    cedarpass21 = myObj.data[44].cc.statusData.status;
+	cedarpass22A = myObj.data[46].cc.statusData.status;
+	cedarpass22 = myObj.data[47].cc.statusData.status;
+	west3 = myObj.data[36].cc.statusData.status;
+	sage10 = myObj.data[33].cc.statusData.status;
+	sage11 = myObj.data[35].cc.statusData.status;
+
+	
+	}
+		if (cedarpass21 == "R-0") {
+  document.getElementById("21").src="http://geo.dot.ca.gov/ca511dfp/cmsgif.php?p1l1=CEDAR%20PASS%2021&p1l2=CHAIN%20CONTROL&p1l3=W&p2l1=&p2l2=&p2l3=";
+  }
+  		if (cedarpass21 == "R-1 MODIFIED") {
+  document.getElementById("21").src="http://geo.dot.ca.gov/ca511dfp/cmsgif.php?p1l1=CEDAR%20PASS%2021&p1l2=CHAIN%20CONTROL&p1l3=R-1 MODIFIED&p2l1=&p2l2=&p2l3=";
+  }
+    		if (cedarpass21 == "R-1") {
+  document.getElementById("21").src="http://geo.dot.ca.gov/ca511dfp/cmsgif.php?p1l1=CEDAR%20PASS%2021&p1l2=CHAIN%20CONTROL&p1l3=R-1&p2l1=&p2l2=&p2l3=";
+  }
+      		if (cedarpass21 == "R-2") {
+  document.getElementById("21").src="http://geo.dot.ca.gov/ca511dfp/cmsgif.php?p1l1=CEDAR%20PASS%2021&p1l2=CHAIN%20CONTROL&p1l3=R-2&p2l1=&p2l2=&p2l3=";
+  }
+  		if (cedarpass22A == "R-0") {
+  document.getElementById("22A").src="http://geo.dot.ca.gov/ca511dfp/cmsgif.php?p1l1=CEDAR%20PASS%2022A&p1l2=CHAIN%20CONTROL&p1l3=W&p2l1=&p2l2=&p2l3=";
+  }
+  		if (cedarpass22A == "R-1 MODIFIED") {
+  document.getElementById("22A").src="http://geo.dot.ca.gov/ca511dfp/cmsgif.php?p1l1=CEDAR%20PASS%2022A&p1l2=CHAIN%20CONTROL&p1l3=R-1 MODIFIED&p2l1=&p2l2=&p2l3=";
+  }
+    		if (cedarpass22A == "R-1") {
+  document.getElementById("22A").src="http://geo.dot.ca.gov/ca511dfp/cmsgif.php?p1l1=CEDAR%20PASS%2022A&p1l2=CHAIN%20CONTROL&p1l3=R-1&p2l1=&p2l2=&p2l3=";
+  }
+      		if (cedarpass22A == "R-2") {
+  document.getElementById("22A").src="http://geo.dot.ca.gov/ca511dfp/cmsgif.php?p1l1=CEDAR%20PASS%2022A&p1l2=CHAIN%20CONTROL&p1l3=R-2&p2l1=&p2l2=&p2l3=";
+  }
+    		if (cedarpass22 == "R-0") {
+  document.getElementById("22").src="http://geo.dot.ca.gov/ca511dfp/cmsgif.php?p1l1=CEDAR%20PASS%2022&p1l2=CHAIN%20CONTROL&p1l3=W&p2l1=&p2l2=&p2l3=";
+  }
+  		if (cedarpass22 == "R-1 MODIFIED") {
+  document.getElementById("22").src="http://geo.dot.ca.gov/ca511dfp/cmsgif.php?p1l1=CEDAR%20PASS%2022&p1l2=CHAIN%20CONTROL&p1l3=R-1 MODIFIED&p2l1=&p2l2=&p2l3=";
+  }
+    		if (cedarpass22 == "R-1") {
+  document.getElementById("22").src="http://geo.dot.ca.gov/ca511dfp/cmsgif.php?p1l1=CEDAR%20PASS%2022&p1l2=CHAIN%20CONTROL&p1l3=R-1&p2l1=&p2l2=&p2l3=";
+  }
+      		if (cedarpass22 == "R-2") {
+  document.getElementById("22").src="http://geo.dot.ca.gov/ca511dfp/cmsgif.php?p1l1=CEDAR%20PASS%2022&p1l2=CHAIN%20CONTROL&p1l3=R-2&p2l1=&p2l2=&p2l3=";
+  }
+      		if (west3 == "R-0") {
+  document.getElementById("3").src="http://geo.dot.ca.gov/ca511dfp/cmsgif.php?p1l1=WEST%203&p1l2=CHAIN%20CONTROL&p1l3=W&p2l1=&p2l2=&p2l3=";
+  }
+  		if (west3 == "R-1 MODIFIED") {
+  document.getElementById("3").src="http://geo.dot.ca.gov/ca511dfp/cmsgif.php?p1l1=WEST%203&p1l2=CHAIN%20CONTROL&p1l3=R-1 MODIFIED&p2l1=&p2l2=&p2l3=";
+  }
+    		if (west3 == "R-1") {
+  document.getElementById("3").src="http://geo.dot.ca.gov/ca511dfp/cmsgif.php?p1l1=WEST%203&p1l2=CHAIN%20CONTROL&p1l3=R-1&p2l1=&p2l2=&p2l3=";
+  }
+      		if (west3 == "R-2") {
+  document.getElementById("3").src="http://geo.dot.ca.gov/ca511dfp/cmsgif.php?p1l1=WEST%203&p1l2=CHAIN%20CONTROL&p1l3=R-2&p2l1=&p2l2=&p2l3=";
+  }
+        	if (sage10 == "R-0") {
+  document.getElementById("10").src="http://geo.dot.ca.gov/ca511dfp/cmsgif.php?p1l1=SAGE%20HEN%2010&p1l2=CHAIN%20CONTROL&p1l3=W&p2l1=&p2l2=&p2l3=";
+  }
+  		if (sage10 == "R-1 MODIFIED") {
+  document.getElementById("10").src="http://geo.dot.ca.gov/ca511dfp/cmsgif.php?p1l1=SAGE%20HEN%2010&p1l2=CHAIN%20CONTROL&p1l3=R-1 MODIFIED&p2l1=&p2l2=&p2l3=";
+  }
+    		if (sage10 == "R-1") {
+  document.getElementById("10").src="http://geo.dot.ca.gov/ca511dfp/cmsgif.php?p1l1=SAGE%20HEN%2010&p1l2=CHAIN%20CONTROL&p1l3=R-1&p2l1=&p2l2=&p2l3=";
+  }
+      		if (sage10 == "R-2") {
+  document.getElementById("10").src="http://geo.dot.ca.gov/ca511dfp/cmsgif.php?p1l1=SAGE%20HEN%2010&p1l2=CHAIN%20CONTROL&p1l3=R-2&p2l1=&p2l2=&p2l3=";
+  }
+         	if (sage11 == "R-0") {
+  document.getElementById("11").src="http://geo.dot.ca.gov/ca511dfp/cmsgif.php?p1l1=SAGE%20HEN%2011&p1l2=CHAIN%20CONTROL&p1l3=W&p2l1=&p2l2=&p2l3=";
+  }
+  		if (sage11 == "R-1 MODIFIED") {
+  document.getElementById("11").src="http://geo.dot.ca.gov/ca511dfp/cmsgif.php?p1l1=SAGE%20HEN%2011&p1l2=CHAIN%20CONTROL&p1l3=R-1 MODIFIED&p2l1=&p2l2=&p2l3=";
+  }
+    		if (sage11 == "R-1") {
+  document.getElementById("11").src="http://geo.dot.ca.gov/ca511dfp/cmsgif.php?p1l1=SAGE%20HEN%2011&p1l2=CHAIN%20CONTROL&p1l3=R-1&p2l1=&p2l2=&p2l3=";
+  }
+      		if (sage11 == "R-2") {
+  document.getElementById("11").src="http://geo.dot.ca.gov/ca511dfp/cmsgif.php?p1l1=SAGE%20HEN%2011&p1l2=CHAIN%20CONTROL&p1l3=R-2&p2l1=&p2l2=&p2l3=";
   }
 };
+
+
 xmlhttp.open("GET", "https://cors-anywhere.herokuapp.com/https://cwwp2.dot.ca.gov/data/d2/cc/ccStatusD02.json", true);
 xmlhttp.send();
 </script>
-
+			<div id="test" style="position:absolute;top:50px;"><div style="position:absolute;left:107px;top:0px;width:1060px;background-color:grey;color:black;"><h1>Alturas</h1></div>
+<div  style="position:absolute;left:107px;top:83px;width:352px;"><img id="21" border="0" src="" alt="Montgomery Creek" title="Montgomery Creek" height="240" Width="352"></div>
+<div style="position:absolute;left:107px;top:323px;width:352px;background-color:black;color:white;"><br></div>
+<div style="position:absolute;left:461px;top:83px;width:352px;"><img id="22A"border="0" src="" alt="Hatchet Mtn" title="Hatchet Mtn" width="352" height="240"></div>
+<div style="position:absolute;left:461px;top:323px;width:352px;background-color:black;color:white;"><br></div>
+<div style="position:absolute;left:815px;top:83px;width:352px;"><img id="22" border="0" src="" alt="SR299-SR89" title="SR299-SR89" width="352" height="240"></div>
+<div style="position:absolute;left:815px;top:323px;width:352px;background-color:black;color:white;"><br></div>
+<div style="position:absolute;left:107px;top:363px;width:352px;"><img id="3"border="0" src="" alt="Perez" title="Perez" width="352" height="240"></div>
+<div style="position:absolute;left:107px;top:603px;width:352px;background-color:black;color:white;"><br></div>
+<div style="position:absolute;left:461px;top:363px;width:352px;"><img id="10" border="0" src="" alt="Cedar Pass" title="Cedar Pass" width="352" height="240"></div>
+<div style="position:absolute;left:461px;top:603px;width:352px;background-color:black;color:white;"><br></div>
+<div style="position:absolute;left:815px;top:363px;width:352px;"><img id="11" border="0" src="" alt="Cottonwood Truck Scales" title="Cottonwood Truck Scales" width="352" height="240"></div>
+<div style="position:absolute;left:815px;top:603px;width:352px;background-color:black;color:white;"><br></div>
+		</div>
 </body>
 </html>
+
+
