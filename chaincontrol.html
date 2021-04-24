@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JavaScript - read JSON from URL</title>
+  
+</head>
+
+<body id="body">
+  
+<script>
+ var xmlhttp = new XMLHttpRequest();
+
+xmlhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    myObj = JSON.parse(this.responseText);
+    document.getElementById("body").innerHTML = myObj.data[0].cc.statusData.status;
+  }
+};
+xmlhttp.open("GET", "https://cors-anywhere.herokuapp.com/https://cwwp2.dot.ca.gov/data/d2/cc/ccStatusD02.json", true);
+xmlhttp.send();   
+  </script>
+</body>
+</html>
