@@ -1,0 +1,104 @@
+
+
+
+
+
+<html>
+ 
+<head>
+
+<title>Weather Briefer</title>
+<link rel="shortcut icon" href="/jefferson.ico" />
+<link rel="icon" href="/jefferson.ico" />
+ 
+ <style>
+ 
+ #leftcolumn {
+width: 180px;
+float left;
+margin-right:4px;
+margin-left: 10px;
+
+ }
+ 
+ #container {
+ background-color: white;
+width: 1080px;
+height: 950px;
+position:fixed;
+top:0px;
+left:150px;
+ }
+ 
+ </style>
+ 
+<script type="text/javascript">
+function jsFilter(strInc)
+{
+document.getElementByID("display").src =  ';
+}
+</script>
+ 
+</head>
+ 
+ 
+
+ <body style="background-image:url('Background.png');background-repeat:no-repeat;background-position:right top;background-color:#000066;color:#FFFFFF">
+
+
+<div id="leftcolumn">
+<h2 class="left"> </h2>
+
+5 Day
+</br>
+</br>
+<button type='button' onClick="document.getElementById('display').src='https://forecast.weather.gov/MapClick.php?lon=-120.94367980957033&lat=41.2003564284399' ">Adin</button>
+
+</br>
+<button type='button' onClick="document.getElementById('display').src='https://forecast.weather.gov/MapClick.php?lon=-120.94676971435547&lat=41.358772520422264' ">Adin Pass</button>
+
+</br>
+<button type='button' onClick="document.getElementById('display').src='https://forecast.weather.gov/MapClick.php?lon=-121.21696472167967&lat=41.06692773019347' ">Big Valley Mtn</button>
+</br>
+<button type='button' onClick="document.getElementById('display').src='https://forecast.weather.gov/MapClick.php?lon=-120.77495813369752&lat=40.96964821115739' ">Cattle Guard Hill</button>
+</br>
+</br>
+
+</br>
+Forecast Discussion
+</br>
+</br>
+<button type='button' onClick="document.getElementById('display').src='https://forecast.weather.gov/product.php?site=NWS&issuedby=rev&product=AFD&format=CI&version=1&glossary=1' ">Reno Discussion</button>
+</br>
+<button type='button' onClick="document.getElementById('display').src='https://forecast.weather.gov/product.php?site=MFR&issuedby=MFR&product=AFD&format=CI&version=1&glossary=1' ">Medford Discussion</button>
+</br>
+
+</br>
+Hourly
+</br>
+</br>
+<button type='button' onClick="document.getElementById('display').src='https://forecast.weather.gov/MapClick.php?lat=41.2004&lon=-120.9437&unit=0&lg=english&FcstType=graphical' ">Adin</button>
+</br>
+<button type='button' onClick="document.getElementById('display').src='https://forecast.weather.gov/MapClick.php?lat=41.3588&lon=-120.9468&unit=0&lg=english&FcstType=graphical' ">Adin Pass</button>
+</br>
+<button type='button' onClick="document.getElementById('display').src='https://forecast.weather.gov/MapClick.php?lat=41.0669&lon=-121.217&unit=0&lg=english&FcstType=graphical' ">Big Valley Mtn</button>
+</br>
+<button type='button' onClick="document.getElementById('display').src='https://forecast.weather.gov/MapClick.php?lat=40.9696&lon=-120.775&unit=0&lg=english&FcstType=graphical' ">Cattle Guard Hill</button>
+</br>
+
+</br>
+
+</br>
+<button type='button' onClick="document.getElementById('display').src='alturascctv.html'">Cameras</button>
+</br>
+
+
+<div id="container">
+
+
+<iframe id="display" width="100%" height="90%" frameborder="0" marginwidth="0" marginheight="0" src="https://forecast.weather.gov/MapClick.php?lon=-120.94367980957033&lat=41.2003564284399"></iframe>
+</div>
+ 
+</body>
+ 
+</html>
