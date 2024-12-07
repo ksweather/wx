@@ -1,0 +1,92 @@
+@font-face
+{
+font-family:'cmstest';
+src: url('cmstest.eot');
+src: url('cmstest.eot?#iefix') format('embedded-opentype'), url('cmstest.woff') format('woff'), url('cmstest.ttf') format('truetype'), url('cmstest.svg#cmstest') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+@font-face
+{
+font-family:'sv170singlestroke';
+src: url('sv170singlestroke.eot');
+src: url('sv170singlestroke.eot?#iefix') format('embedded-opentype'), url('sv170singlestroke.woff') format('woff'), url('sv170singlestroke.ttf') format('truetype'), url('sv170singlestroke.svg#cmstest') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+body
+{
+font-family:sans-serif;
+}
+.tableCSS
+{
+border-collapse:collapse;
+}
+.tableCSS td, .tableCSS th 
+{
+font-size:1.0em;
+border:1px solid #5F5F5F;
+padding: 4px;
+}
+.tableCSS td.sep, th.sep
+{
+border-left:5px solid #5F5F5F;
+}
+.tableCSS th 
+{
+font-size:1.4em;
+text-align:left;
+background-color:#767676;
+color:#fff;
+}
+.tableCSS tr.alt 
+{
+color:#000;
+background-color:#F0F0F0;
+}
+.tableCSS td.message
+{
+font-family:monospace;
+text-align: center;
+}
+.cmsCSS
+{
+background-color:black;
+color:yellow;
+font-family:'sv170singlestroke';
+font-size:1.6em;
+height:240px;
+line-height: 1.1;
+text-align: center;
+position:absolute;
+vertical-align: middle;
+#width:352px;
+width:552px;
+}
+.descriptionCSS
+{
+background-color:black;
+color:white;
+position:absolute;
+width:552px;
+text-align: center;
+}
+.headerCSS
+{
+background-color:grey;
+color:black;
+position:absolute;
+width:1060px;
+}
+.cmsHeaderCSS
+{
+background-color:grey;
+color:black;
+position:absolute;
+width:1660px;
+}
+.imageCSS
+{
+position:absolute;
+width:352px;
+}
