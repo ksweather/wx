@@ -60,15 +60,15 @@ line-height: 1.1;
 text-align: center;
 position:absolute;
 vertical-align: middle;
-#width:352px;
-width:552px;
+#width:400px;
+width:400px;
 }
 .descriptionCSS
 {
 background-color:black;
 color:white;
 position:absolute;
-width:552px;
+width:400px;
 text-align: center;
 }
 .headerCSS
