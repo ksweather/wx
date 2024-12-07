@@ -61,14 +61,14 @@ text-align: center;
 position:absolute;
 vertical-align: middle;
 #width:400px;
-width:400px;
+width:500px;
 }
 .descriptionCSS
 {
 background-color:black;
 color:white;
 position:absolute;
-width:400px;
+width:500px;
 text-align: center;
 }
 .headerCSS
