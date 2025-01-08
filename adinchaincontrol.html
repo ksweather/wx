@@ -1,0 +1,174 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="cwwp2.css">
+</head>
+
+<body>
+
+
+
+<p id="demo"></p>
+
+<script>
+var xmlhttp = new XMLHttpRequest();
+var BV15 ="";
+var BV16 ="";
+var BV16a ="";
+var BV17 ="";
+var Adin18 ="";
+var Adin19 ="";
+var Adin20 ="";
+var South2 ="";
+
+
+
+xmlhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    myObj = JSON.parse(this.responseText);
+    	BV15 = myObj.data[19].cc.statusData.status;
+	BV16 = myObj.data[20].cc.statusData.status;
+	BV16a = myObj.data[21].cc.statusData.status;
+	BV17 = myObj.data[23].cc.statusData.status;
+	Adin18 = myObj.data[40].cc.statusData.status;
+	Adin19 = myObj.data[42].cc.statusData.status;
+	Adin20 = myObj.data[43].cc.statusData.status;
+	South2 = myObj.data[18].cc.statusData.status;
+
+	
+	}
+		if (BV15 == "R-0") {
+  document.getElementById("15").innerHTML="<br>No chain controls are<br><br>in effect at this time<br>-----------------<br><br><br><br>";
+  }
+  		if (BV15 == "R-1M") {
+  document.getElementById("15").innerHTML="<br>R-1M chain controls are<br><br>in effect at this time<br>-----------------<br><br><br><br>";
+  }
+    		if (BV15 == "R-1") {
+  document.getElementById("15").innerHTML="<br>R-1 chain controls are<br><br>in effect at this time<br>-----------------<br><br><br><br>";
+  }
+      		if (BV15 == "R-2") {
+  document.getElementById("15").innerHTML="<br>R-2 chain controls are<br><br>in effect at this time<br>-----------------<br><br><br><br>";
+  }
+  		if (BV16 == "R-0") {
+  document.getElementById("16").innerHTML="<br>No chain controls are<br><br>in effect at this time<br>-----------------<br><br><br><br>";
+  }
+  		if (BV16 == "R-1M") {
+  document.getElementById("16").innerHTML="<br>R-1M chain controls are<br><br>in effect at this time<br>-----------------<br><br><br><br>";
+  }
+    		if (BV16 == "R-1") {
+  document.getElementById("16").innerHTML="<br>R-1 chain controls are<br><br>in effect at this time<br>-----------------<br><br><br><br>";
+  }
+      		if (BV16 == "R-2") {
+  document.getElementById("16").innerHTML="<br>R-2 chain controls are<br><br>in effect at this time<br>-----------------<br><br><br><br>";
+  }
+    		if (BV16a == "R-0") {
+  document.getElementById("16a").innerHTML="<br>No chain controls are<br><br>in effect at this time<br>-----------------<br><br><br><br>";
+  }
+  		if (BV16a == "R-1M") {
+  document.getElementById("16a").innerHTML="<br>R-1M chain controls are<br><br>in effect at this time<br>-----------------<br><br><br><br>";
+  }
+    		if (BV16a == "R-1") {
+  document.getElementById("16a").innerHTML="<br>R-1 chain controls are<br><br>in effect at this time<br>-----------------<br><br><br><br>";
+  }
+      		if (BV16a == "R-2") {
+  document.getElementById("16a").innerHTML="<br>R-2 chain controls are<br><br>in effect at this time<br>-----------------<br><br><br><br>";
+  }
+      		if (BV17 == "R-0") {
+  document.getElementById("17").innerHTML="<br>No chain controls are<br><br>in effect at this time<br>-----------------<br><br><br><br>";
+  }
+  		if (BV17 == "R-1M") {
+  document.getElementById("17").innerHTML="<br>R-1M chain controls are<br><br>in effect at this time<br>-----------------<br><br><br><br>";
+  }
+    		if (BV17 == "R-1") {
+  document.getElementById("17").innerHTML="<br>R-1 chain controls are<br><br>in effect at this time<br>-----------------<br><br><br><br>";
+  }
+      		if (BV17 == "R-2") {
+  document.getElementById("17").innerHTML="<br>R-2 chain controls are<br><br>in effect at this time<br>-----------------<br><br><br><br>";
+  }
+        	if (Adin18 == "R-0") {
+  document.getElementById("18").innerHTML="<br>No chain controls are<br><br>in effect at this time<br>-----------------<br><br><br><br>";
+  }
+  		if (Adin18 == "R-1M") {
+  document.getElementById("18").innerHTML="<br>R-1M chain controls are<br><br>in effect at this time<br>-----------------<br><br><br><br>";
+  }
+    		if (Adin18 == "R-1") {
+  document.getElementById("18").innerHTML="<br>R-1 chain controls are<br><br>in effect at this time<br>-----------------<br><br><br><br>";
+  }
+      		if (Adin18 == "R-2") {
+  document.getElementById("18").innerHTML="<br>R-2 chain controls are<br><br>in effect at this time<br>-----------------<br><br><br><br>";
+  }
+         	if (Adin19 == "R-0") {
+  document.getElementById("19").innerHTML="<br>No chain controls are<br><br>in effect at this time<br>-----------------<br><br><br><br>";
+  }
+  		if (Adin19 == "R-1M") {
+  document.getElementById("19").innerHTML="<br>R-1M chain controls are<br><br>in effect at this time<br>-----------------<br><br><br><br>";
+  }
+    		if (Adin19 == "R-1") {
+  document.getElementById("19").innerHTML="<br>R-1 chain controls are<br><br>in effect at this time<br>-----------------<br><br><br><br>";
+  }
+      		if (Adin19 == "R-2") {
+  document.getElementById("19").innerHTML="<br>R-2 chain controls are<br><br>in effect at this time<br>-----------------<br><br><br><br>";
+  }
+        	if (Adin20 == "R-0") {
+  document.getElementById("20").innerHTML="<br>No chain controls are<br><br>in effect at this time<br>-----------------<br><br><br><br>";
+  }
+  		if (Adin20 == "R-1M") {
+  document.getElementById("20").innerHTML="<br>R-1M chain controls are<br><br>in effect at this time<br>-----------------<br><br><br><br>";
+  }
+    		if (Adin20 == "R-1") {
+  document.getElementById("20").innerHTML="<br>R-1 chain controls are<br><br>in effect at this time<br>-----------------<br><br><br><br>";
+  }
+      		if (Adin20 == "R-2") {
+  document.getElementById("20").innerHTML="<br>R-2 chain controls are<br><br>in effect at this time<br>-----------------<br><br><br><br>";
+  }
+        	if (South2 == "R-0") {
+  document.getElementById("2").innerHTML="<br>No chain controls are<br><br>in effect at this time<br>-----------------<br><br><br><br>";
+  }
+  		if (South2 == "R-1M") {
+  document.getElementById("2").innerHTML="<br>R-1M chain controls are<br><br>in effect at this time<br>-----------------<br><br><br><br>";
+  }
+    		if (South2 == "R-1") {
+  document.getElementById("2").innerHTML="<br>R-1 chain controls are<br><br>in effect at this time<br>-----------------<br><br><br><br>";
+  }
+      		if (South2 == "R-2") {
+  document.getElementById("2").innerHTML="<br>R-2 chain controls are<br><br>in effect at this time<br>-----------------<br><br><br><br>";
+  }
+};
+
+
+xmlhttp.open("GET", "https://cwwp2.dot.ca.gov/data/d2/cc/ccStatusD02.json", true);
+xmlhttp.send();
+</script>
+			<div id="test"><h1>Alturas</h1></div>
+
+<div id="15" class="cmsCSS" style="left:0px;top:83px;"></div>
+<div class="descriptionCSS" style="left:0px;top:323px;">Chain Sign 15<br>&nbsp;</div>
+
+<div id="16" class="cmsCSS" style="left:500px;top:83px;"></div>
+<div class="descriptionCSS" style="left:500px;top:323px;">Chain Sign 16<br>&nbsp;</div>
+
+<div id="16a" class="cmsCSS" style="left:1000px;top:83px;"></div>
+<div class="descriptionCSS" style="left:1000px;top:323px;">Chain Sign 16A<br>&nbsp;</div>
+
+<div id="17" class="cmsCSS" style="left:0px;top:446px;"></div>
+<div class="descriptionCSS" style="left:0px;top:686px;">Chain Sign 17<br>&nbsp;</div>
+
+<div id="18" class="cmsCSS" style="left:500px;top:446px;"></div>
+<div class="descriptionCSS" style="left:500px;top:686px;">Chain Sign 18<br>&nbsp;</div>
+
+<div id="19" class="cmsCSS" style="left:1000px;top:446px;"></div>
+<div class="descriptionCSS" style="left:1000px;top:686px;">Chain Sign 19<br>&nbsp;</div>
+
+<div id="20" class="cmsCSS" style="left:0px;top:809px;"></div>
+<div class="descriptionCSS" style="left:0px;top:1049px;">Chain Sign 20<br>&nbsp;</div>
+
+<div id="2" class="cmsCSS" style="left:500px;top:809px;"></div>
+<div class="descriptionCSS" style="left:500px;top:1049px;">Chain Sign 2<br>&nbsp;</div>
+
+
+		</div>
+</body>
+</html>
